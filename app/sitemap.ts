@@ -1,0 +1,2 @@
+import {programmes,listingRoutes} from '@/lib/content';
+export default function sitemap(){const root='https://mchf-health-foundation.salty-tick-4448.chatgpt.site';return ['','/about','/about/governance','/about/leadership','/programmes',...programmes.map(p=>'/programmes/'+p.slug),'/strategic-plan-2027-2031','/how-we-work','/partnerships','/contact','/get-involved',...Object.keys(listingRoutes).map(p=>'/'+p)].map(path=>({url:root+path}))}

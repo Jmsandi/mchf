@@ -1,0 +1,48 @@
+{
+  "tool": "built-in image_gen",
+  "inspected": true,
+  "assets": [
+    {
+      "name": "maternal-care",
+      "prompt": "Use case: illustration-story\nAsset type: NGO public-health website educational illustration about Sierra Leone.\nStyle/medium: Premium hand-painted editorial gouache illustration on textured warm paper. Visibly a crafted illustration with expressive brush edges, matte pigment layering, natural human proportions, dignified people and warm natural African skin tones. Consistent palette of rich navy, forest green, teal, restrained gold and warm cream.\nComposition/framing: Landscape 3:2 composition, balanced scene with clear human interaction, enough surrounding environment to establish context, polished contemporary editorial artwork.\nLighting/mood: Warm daylight, welcoming, trustworthy, calm, respectful.\nConstraints: Original invented people, no real named people or organisations. No text, letters, numbers, logos, watermarks, flags, official seals or legible data. Do not simulate documentary photography. No injection, needles, clinical procedures or distress.\nPrimary request: A Sierra Leonean mother seated comfortably holding her swaddled newborn, speaking with a female African health worker in a welcoming modest clinic. The worker is listening attentively at eye level. Their expressions are relaxed and reassuring. Simple airy clinic with a bench, pale wall, window and leafy greenery; no medical procedure.",
+      "path": "public/images/learning-rmnch.jpg",
+      "width": 1536,
+      "height": 1024,
+      "website_asset": "public/images/learning-rmnch.jpg"
+    },
+    {
+      "name": "vaccination-conversation",
+      "prompt": "Use case: illustration-story\nAsset type: NGO public-health website educational illustration about Sierra Leone.\nStyle/medium: Premium hand-painted editorial gouache illustration on textured warm paper. Visibly a crafted illustration with expressive brush edges, matte pigment layering, natural human proportions, dignified people and warm natural African skin tones. Consistent palette of rich navy, forest green, teal, restrained gold and warm cream.\nComposition/framing: Landscape 3:2 composition, balanced scene with clear human interaction, enough surrounding environment to establish context, polished contemporary editorial artwork.\nLighting/mood: Warm daylight, welcoming, trustworthy, calm, respectful.\nConstraints: Original invented people, no real named people or organisations. No text, letters, numbers, logos, watermarks, flags, official seals or legible data. Do not simulate documentary photography. No injection, needles, clinical procedures or distress.\nPrimary request: A Sierra Leonean parent seated with their young child asks a friendly African health worker about the child's vaccination. They are having a calm educational conversation. The parent holds a completely blank cream vaccination card; the worker gestures openly while explaining. Welcoming clinic consultation area, no injection, no needle, no procedure.",
+      "path": "public/images/learning-immunization.jpg",
+      "width": 1536,
+      "height": 1024,
+      "website_asset": "public/images/learning-immunization.jpg"
+    },
+    {
+      "name": "community-discussion",
+      "prompt": "Use case: illustration-story\nAsset type: NGO public-health website educational illustration about Sierra Leone.\nStyle/medium: Premium hand-painted editorial gouache illustration on textured warm paper. Visibly a crafted illustration with expressive brush edges, matte pigment layering, natural human proportions, dignified people and warm natural African skin tones. Consistent palette of rich navy, forest green, teal, restrained gold and warm cream.\nComposition/framing: Landscape 3:2 composition, balanced scene with clear human interaction, enough surrounding environment to establish context, polished contemporary editorial artwork.\nLighting/mood: Warm daylight, welcoming, trustworthy, calm, respectful.\nConstraints: Original invented people, no real named people or organisations. No text, letters, numbers, logos, watermarks, flags, official seals or legible data. Do not simulate documentary photography. No injection, needles, clinical procedures or distress.\nPrimary request: A diverse group of African adult community members and several older youth participate in an inclusive outdoor health discussion in Sierra Leone. Mixed genders and ages, including an older adult and a person using a mobility aid, seated in a welcoming circle beneath a shade tree, one community facilitator listening as a participant speaks. Subtle modest neighbourhood buildings and greenery. Respectful everyday clothing, no crowd spectacle.",
+      "path": "public/images/learning-community-health.jpg",
+      "width": 1536,
+      "height": 1024,
+      "website_asset": "public/images/learning-community-health.jpg"
+    },
+    {
+      "name": "community-research",
+      "prompt": "Use case: illustration-story\nAsset type: NGO public-health website educational illustration about Sierra Leone.\nStyle/medium: Premium hand-painted editorial gouache illustration on textured warm paper. Visibly a crafted illustration with expressive brush edges, matte pigment layering, natural human proportions, dignified people and warm natural African skin tones. Consistent palette of rich navy, forest green, teal, restrained gold and warm cream.\nComposition/framing: Landscape 3:2 composition, balanced scene with clear human interaction, enough surrounding environment to establish context, polished contemporary editorial artwork.\nLighting/mood: Warm daylight, welcoming, trustworthy, calm, respectful.\nConstraints: Original invented people, no real named people or organisations. No text, letters, numbers, logos, watermarks, flags, official seals or legible data. Do not simulate documentary photography. No injection, needles, clinical procedures or distress.\nPrimary request: An African public-health research team and an African community representative review anonymous abstract charts together around a table in Sierra Leone. Four adults with varied genders and ages, engaged collaborative discussion, paper sheets and a simple laptop show only non-legible abstract colored chart shapes without letters, numbers or identifiable personal data. Bright modest office with a window and plants.",
+      "path": "public/images/learning-research-innovation.jpg",
+      "width": 1536,
+      "height": 1024,
+      "website_asset": "public/images/learning-research-innovation.jpg"
+    },
+    {
+      "name": "reliable-services",
+      "prompt": "Use case: illustration-story\nAsset type: NGO public-health website educational illustration about Sierra Leone.\nStyle/medium: Premium hand-painted editorial gouache illustration on textured warm paper. Visibly a crafted illustration with expressive brush edges, matte pigment layering, natural human proportions, dignified people and warm natural African skin tones. Consistent palette of rich navy, forest green, teal, restrained gold and warm cream.\nComposition/framing: Landscape 3:2 composition, balanced scene with clear human interaction, enough surrounding environment to establish context, polished contemporary editorial artwork.\nLighting/mood: Warm daylight, welcoming, trustworthy, calm, respectful.\nConstraints: Original invented people, no real named people or organisations. No text, letters, numbers, logos, watermarks, flags, official seals or legible data. Do not simulate documentary photography. No injection, needles, clinical procedures or distress.\nPrimary request: African frontline health workers and a community referral coordinator in Sierra Leone collaborate around a table to plan reliable services. Four adults, varied genders, practical everyday professional clothing and simple plain scrubs, a coordinator pointing to a blank planning sheet with abstract unlabelled shapes and connecting lines; attentive cooperative expressions. A modest clinic office with shelves, daylight and greenery; no official uniforms, no text or logos.",
+      "path": "public/images/learning-health-systems.jpg",
+      "width": 1536,
+      "height": 1024,
+      "website_asset": "public/images/learning-health-systems.jpg"
+    }
+  ],
+  "original_images_retained_locally": true,
+  "website_assets_directory": "public/images/"
+}

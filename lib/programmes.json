@@ -1,0 +1,287 @@
+[
+  {
+    "title": "Reproductive, Maternal, Newborn & Child Health",
+    "subtitle": "Care across the continuum from adolescence through pregnancy, birth and early childhood",
+    "interventions": [
+      {
+        "title": "Adolescent & Youth SRH",
+        "activities": [
+          "SRH education and awareness sessions",
+          "youth-friendly information materials",
+          "referral to youth-friendly services",
+          "peer educators and youth champions",
+          "school and community outreach"
+        ]
+      },
+      {
+        "title": "Family Planning & Reproductive Health",
+        "activities": [
+          "Community education on voluntary, informed FP choices",
+          "address myths, stigma and misinformation",
+          "promote awareness of available methods and services",
+          "strengthen referral and linkage"
+        ]
+      },
+      {
+        "title": "Maternal Health & Safe Motherhood",
+        "activities": [
+          "Education on early and quality antenatal care",
+          "birth preparedness and complication readiness",
+          "skilled birth attendance and facility delivery",
+          "postpartum-care awareness",
+          "community referral"
+        ]
+      },
+      {
+        "title": "Newborn Health & Survival",
+        "activities": [
+          "Essential newborn care practices",
+          "early and timely postnatal care",
+          "awareness of newborn danger signs",
+          "community-based newborn health promotion and referral"
+        ]
+      },
+      {
+        "title": "Child Health, Nutrition & ECD",
+        "activities": [
+          "Child health and disease-prevention education",
+          "infant and young-child feeding and nutrition",
+          "recognition of danger signs",
+          "early childhood development and positive caregiving",
+          "referral"
+        ]
+      },
+      {
+        "title": "Community-Based Linkage & Referral",
+        "activities": [
+          "Strengthen community-to-facility referral mechanisms",
+          "engage CHWs, leaders and youth groups",
+          "promote awareness of available RMNCH services",
+          "follow up and link priority clients"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Immunization, Vaccine Confidence & Disease Prevention",
+    "subtitle": "Building demand, trust and protection against preventable disease",
+    "interventions": [
+      {
+        "title": "Immunization Demand Generation & Uptake",
+        "activities": [
+          "Community education on the benefits of routine immunization",
+          "awareness campaigns for timely, complete childhood immunization",
+          "culturally appropriate materials",
+          "engage parents, leaders and youth",
+          "mobilisation during immunization activities"
+        ]
+      },
+      {
+        "title": "Vaccine Confidence & Misinformation Management",
+        "activities": [
+          "Community dialogues on vaccine concerns and myths",
+          "evidence-based counter-misinformation materials",
+          "train community champions in vaccine communication",
+          "engage trusted religious, traditional and youth leaders",
+          "monitor emerging concerns"
+        ]
+      },
+      {
+        "title": "Community-Based Disease Prevention",
+        "activities": [
+          "Health education on priority infectious and vaccine-preventable diseases",
+          "hygiene, sanitation and infection prevention",
+          "transmission and early care-seeking awareness",
+          "support during outbreaks and public-health emergencies"
+        ]
+      },
+      {
+        "title": "Youth & Community Engagement",
+        "activities": [
+          "Establish youth and community immunization champions",
+          "youth-focused awareness activities",
+          "social media and digital platforms for accurate information",
+          "community dialogues",
+          "youth-led advocacy initiatives"
+        ]
+      },
+      {
+        "title": "Evidence Generation",
+        "activities": [
+          "KAP assessments on immunization and prevention",
+          "barrier assessments among underserved communities",
+          "document community perceptions and experiences",
+          "programme assessments and evaluations",
+          "research reports and policy briefs"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Community Health, Empowerment & Health Equity",
+    "subtitle": "Communities as owners and drivers of their own health outcomes",
+    "interventions": [
+      {
+        "title": "Health Education & Health Literacy",
+        "activities": [
+          "Community awareness sessions on priority health issues",
+          "culturally appropriate health-information materials",
+          "community, radio, digital and social-media platforms",
+          "health-promotion campaigns",
+          "build health literacy for informed decisions"
+        ]
+      },
+      {
+        "title": "Youth & Community Participation",
+        "activities": [
+          "Platforms for adolescents and young people in programme decision-making",
+          "youth and community dialogues",
+          "engage leaders, youth organisations and women's groups in design",
+          "support youth-led and community-led initiatives"
+        ]
+      },
+      {
+        "title": "Behaviour Change & Social Mobilization",
+        "activities": [
+          "Evidence-based behaviour-change communication",
+          "dialogues addressing harmful beliefs and practices",
+          "mobilise communities around priority campaigns",
+          "peer education and community networks",
+          "monitor community feedback"
+        ]
+      },
+      {
+        "title": "Community Champions & Peer Support",
+        "activities": [
+          "Identify and engage champions and peer educators",
+          "orientation, training and mentorship",
+          "community-led peer-support initiatives",
+          "disseminate accurate information and promote care-seeking",
+          "link individuals to services"
+        ]
+      },
+      {
+        "title": "Health Equity & Inclusion",
+        "activities": [
+          "Identify social, geographic and economic access barriers",
+          "outreach prioritising underserved and vulnerable communities",
+          "inclusive participation of women, adolescents and young people",
+          "advocate equitable access",
+          "document barriers"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Research, Evidence & Innovation",
+    "subtitle": "Generating the evidence that makes programmes work and proving what works",
+    "interventions": [
+      {
+        "title": "Operational & Community Health Research",
+        "activities": [
+          "Identify priority evidence gaps",
+          "operational and community-based research on RMNCH, immunization and prevention",
+          "community health and needs assessments",
+          "KAP studies",
+          "collaborate with academic institutions"
+        ]
+      },
+      {
+        "title": "Monitoring, Evaluation & Learning",
+        "activities": [
+          "Develop and implement M&E frameworks",
+          "collect, manage and analyse programme data",
+          "baseline, midline and endline assessments",
+          "programme reviews and evaluations",
+          "use lessons to improve implementation"
+        ]
+      },
+      {
+        "title": "Knowledge Translation & Dissemination",
+        "activities": [
+          "Translate findings into practical recommendations",
+          "research reports, policy briefs and evidence summaries",
+          "dissemination meetings, stakeholder dialogues and learning events",
+          "digital dissemination",
+          "promote use of local evidence"
+        ]
+      },
+      {
+        "title": "Health Innovation & Solution Testing",
+        "activities": [
+          "Identify innovative solutions to priority challenges",
+          "design and pilot practical interventions",
+          "test community-health, digital-health and BCC approaches",
+          "document lessons",
+          "engage youth in developing solutions"
+        ]
+      },
+      {
+        "title": "Research & Academic Partnerships",
+        "activities": [
+          "Collaborative relationships with universities and research institutions",
+          "joint research and knowledge generation",
+          "opportunities for students and emerging researchers",
+          "seminars and research forums",
+          "ethical, rigorous, locally relevant research"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Health-System Strengthening & Strategic Partnerships",
+    "subtitle": "Stronger services, stronger institutions, stronger collaboration",
+    "interventions": [
+      {
+        "title": "Health-Worker Capacity Strengthening",
+        "activities": [
+          "Mentorship and capacity-building based on identified needs",
+          "coaching and knowledge-sharing initiatives",
+          "develop or adapt training and learning materials",
+          "continuing learning on priority health issues",
+          "support CHWs and frontline personnel"
+        ]
+      },
+      {
+        "title": "Quality Improvement & Service Strengthening",
+        "activities": [
+          "Health-service assessments to identify gaps",
+          "QI initiatives with health authorities and facilities",
+          "develop or adapt quality tools and approaches",
+          "monitoring and learning on service-delivery challenges",
+          "document effective practices"
+        ]
+      },
+      {
+        "title": "Community–Facility Linkages & Referral",
+        "activities": [
+          "Assess barriers to access and referral pathways",
+          "strengthen linkages between communities, structures and facilities",
+          "community-based referral and follow-up mechanisms",
+          "promote awareness of services and referral pathways"
+        ]
+      },
+      {
+        "title": "Institutional & Organizational Capacity",
+        "activities": [
+          "Capacity building for community-based and local organisations",
+          "technical support in planning, implementation, M&E and reporting",
+          "strengthen organisational systems and tools",
+          "peer learning",
+          "sustainable local approaches"
+        ]
+      },
+      {
+        "title": "Strategic Partnerships & Collaboration",
+        "activities": [
+          "Partnerships with government health institutions and local authorities",
+          "collaborations with universities and research institutions",
+          "engage NGOs, development and private-sector partners",
+          "joint programmes and research",
+          "coordination platforms",
+          "resource mobilisation"
+        ]
+      }
+    ]
+  }
+]

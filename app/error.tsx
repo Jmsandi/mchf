@@ -1,0 +1,2 @@
+'use client';
+export default function ErrorPage({reset}:{reset:()=>void}){return <main className='section'><div className='container admin-gate'><span className='eyebrow'>MCHF</span><h1>A brief interruption.</h1><p>This page could not load. Please try again or return to the homepage.</p><button className='button teal' onClick={reset}>Try again</button><a className='text-link' href='/'>Return home</a></div></main>}
