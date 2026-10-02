@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import VisitorTracker from "@/components/site/visitor-tracker";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mchf-health-foundation.salty-tick-4448.chatgpt.site"),
@@ -24,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head><link rel="stylesheet" href="/fonts/fonts.css"/></head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">{children}<VisitorTracker/></body>
     </html>
   );
 }

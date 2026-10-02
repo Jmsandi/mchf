@@ -8,6 +8,13 @@
       "when": 1790458432639,
       "tag": "0000_talented_killer_shrike",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1790843526850,
+      "tag": "0001_strange_sasquatch",
+      "breakpoints": true
     }
   ]
 }

@@ -1,8 +1,30 @@
-import {env} from 'cloudflare:workers';
-import {getChatGPTUser} from '@/app/chatgpt-auth';
-import {database} from './store';
-export const roles=['super_admin','administrator','programme_manager','research_editor','communications_editor','reviewer','author'];
-export async function staff(){const user=await getChatGPTUser();if(!user)return null;const allow=String((env as any).ADMIN_EMAILS||'').toLowerCase().split(',').map(s=>s.trim()).filter(Boolean);if(allow.includes(user.email.toLowerCase())||(import.meta.env.DEV&&user.email==='seedy@sites.test'))return {...user,role:'super_admin'};const member=await database().prepare('SELECT role FROM members WHERE email = ?').bind(user.email.toLowerCase()).first<{role:string}>();return member?{...user,role:member.role}:null;}
-export function canEdit(role:string,kind:string){if(['super_admin','administrator','author'].includes(role))return true;return role==='programme_manager'?['programme','intervention','project','activity','impact'].includes(kind):role==='research_editor'?['research','publication','report','resource'].includes(kind):role==='communications_editor'?['news','event','story','career'].includes(kind):role==='reviewer';}
-export function canPublish(role:string){return ['super_admin','administrator'].includes(role);}
-export function sameOrigin(request:Request){const origin=request.headers.get('origin');return !!origin&&origin===new URL(request.url).origin;}
+import { getChatGPTUser } from '@/app/chatgpt-auth';
+import { database } from './store';
+import { runtimeValue, supabaseConfigured, serverClient, serviceClient, serviceConfigured, requireResult } from './supabase';
+export { roles, canEdit, canPublish, canSaveStatus } from './content-policy';
+export async function staff() {
+    if (supabaseConfigured()) {
+        const client = await serverClient();
+        const { data: { user }, error } = await client.auth.getUser();
+        if (error || !user?.email)
+            return null;
+        let member = requireResult(await client.from('mchf_members').select('role').eq('email', user.email.toLowerCase()).maybeSingle(), 'Staff lookup');
+        const owners = runtimeValue('ADMIN_EMAILS').toLowerCase().split(',').map(s => s.trim()).filter(Boolean);
+        if (!member && owners.includes(user.email.toLowerCase()) && serviceConfigured()) {
+            requireResult(await serviceClient().from('mchf_members').insert({ email: user.email.toLowerCase(), role: 'super_admin', created_by: user.email.toLowerCase() }), 'Administrator setup');
+            member = { role: 'super_admin' };
+        }
+        return member ? { userId: user.id, email: user.email.toLowerCase(), displayName: user.user_metadata?.full_name || user.email, role: member.role, provider: 'supabase' } : null;
+    }
+    const user = await getChatGPTUser();
+    if (!user)
+        return null;
+    const allow = runtimeValue('ADMIN_EMAILS').toLowerCase().split(',').map(s => s.trim()).filter(Boolean);
+    if (allow.includes(user.email.toLowerCase()) || (import.meta.env.DEV && user.email === 'seedy@sites.test'))
+        return { ...user, role: 'super_admin', provider: 'local' };
+    const member = await database().prepare('SELECT role FROM members WHERE email=?').bind(user.email.toLowerCase()).first<{
+        role: string;
+    }>();
+    return member ? { ...user, role: member.role, provider: 'local' } : null;
+}
+export function sameOrigin(request: Request) { return request.headers.get('origin') === new URL(request.url).origin; }

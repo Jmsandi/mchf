@@ -54,3 +54,8 @@ next-env.d.ts
 
 # High-resolution image generation originals stay local; optimized site JPEGs are tracked.
 /design-assets/generated/*.png
+
+# Supabase and Cloudflare local secrets
+.dev.vars*
+/supabase/.temp/
+/supabase/.branches/

@@ -1,7 +1,9 @@
-import Header from '@/components/site/header';
 import {getChatGPTUser,chatGPTSignInPath} from '@/app/chatgpt-auth';
 import {staff} from '@/lib/permissions';
+import {supabaseConfigured} from '@/lib/supabase';
+import {Brand} from '@/components/site/header';
 import Admin from '@/components/site/admin';
+import AdminLogin from '@/components/site/admin-login';
 export const dynamic='force-dynamic';
-export const metadata={title:'Staff publishing area | MCHF',robots:{index:false,follow:false}};
-export default async function AdminPage(){const user=await getChatGPTUser();let member=null;try{member=await staff()}catch{}return <><Header/><main id='main'>{member?<Admin role={member.role} email={member.email}/>:<section className='section'><div className='container admin-gate'><span className='eyebrow'>MCHF STAFF PORTAL</span><h1>Institutional publishing,<br/>with accountability.</h1><p>{user?'Your account has not been granted staff access. An authorized MCHF administrator must add your email to the staff allowlist.':'Sign in with an authorized staff account to manage institutional content, resources and inquiries.'}</p>{!user&&<a className='button teal' href={chatGPTSignInPath('/admin')} target='_top'>Sign in with ChatGPT</a>}<a className='text-link' href='/'>Return to MCHF</a></div></section>}</main></>}
+export const metadata={title:'Admin dashboard | MCHF',robots:{index:false,follow:false}};
+export default async function AdminPage(){const configured=supabaseConfigured();let member=null;try{member=await staff();}catch{}if(member)return <main id='main'><Admin role={member.role} email={member.email} provider={configured?'supabase':'local'}/></main>;const user=configured?null:await getChatGPTUser();return <main id='main' className='admin-login-page'><section className='admin-login-card'><Brand/><span className='eyebrow'>MCHF STAFF WORKSPACE</span><h1>Welcome to your publishing desk.</h1><p>Manage the foundation’s website, share daily insights and understand your audience.</p>{configured?<AdminLogin/>:<div className='admin-setup-message'><h2>Connect Supabase to activate staff sign-in.</h2><p>The administrator email is info@mchf.org. Your Supabase project and database setup are required before live publishing can begin.</p>{import.meta.env.DEV&&!user&&<a className='button teal' href={chatGPTSignInPath('/admin')} target='_top'>Open local development preview</a>}</div>}<a className='board-profile-link' href='/'>Return to the website</a></section></main>;}
