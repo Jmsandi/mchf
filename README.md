@@ -1,6 +1,16 @@
 # MCHF institutional platform
 
-A React / TypeScript website with Vite, Vinext and Cloudflare Workers. The staff dashboard at `/admin` supports Supabase Auth, PostgreSQL and private Supabase Storage. The existing D1/R2 implementation remains available for local preview.
+A React / TypeScript website with Next.js for Vercel deployment and a separate Vinext / Cloudflare preview. The staff dashboard at `/admin` supports Supabase Auth, PostgreSQL and private Supabase Storage. The existing D1/R2 implementation remains available for the Cloudflare preview.
+
+## Deploy on Vercel
+
+Import this repository with its root as the project root. The checked-in `vercel.json` selects **Next.js**, builds with `npm run build`, and uses the `.next` output directory. Node.js is pinned to the supported `24.x` major version. A successful build creates `.next/routes-manifest.json`, which Vercel needs to deploy the application.
+
+Set the Supabase variables below in the Vercel project's **Environment Variables**, then redeploy. Without a Supabase connection, public pages show the repository's baseline content, while staff publishing and persistent analytics remain unavailable. The local preview's mock identity cannot sign into the Vercel dashboard.
+
+Set `SITE_URL` to the final public domain if needed. Otherwise the site's metadata, sitemap and robots file use Vercel's production domain automatically. For a local production check, run `npm run build` followed by `npm start`.
+
+Official documentation: [Vercel builds](https://vercel.com/docs/builds), [Node.js versions](https://vercel.com/docs/functions/runtimes/node-js/node-js-versions), and [system environment variables](https://vercel.com/docs/environment-variables/system-environment-variables).
 
 ## Dashboard
 
@@ -18,7 +28,7 @@ Published records appear on the matching public pages. Programme-linked projects
 
 1. Select the intended Supabase project. This repository does not contain project credentials.
 2. Apply [`supabase/migrations/202610010001_mchf_platform.sql`](supabase/migrations/202610010001_mchf_platform.sql) once, using the Supabase SQL Editor or migration tooling. It creates the `mchf_*` tables, access policies, reporting functions and private `mchf-media` storage bucket.
-3. Set the following **server runtime** variables. For local development, copy `.env.example` to the ignored `.dev.vars` file and fill in the values. For hosting, set these in the worker's runtime environment and secret settings.
+3. Set the following **server runtime** variables. For native Next.js development, copy `.env.example` to the ignored `.env.local` file and run `npm run dev:next`. For the Cloudflare preview, use `.dev.vars` and `npm run dev`. For Vercel, set them in the project's Environment Variables; for Cloudflare hosting, use the worker's runtime environment and secret settings.
 
 ```dotenv
 SUPABASE_URL=https://YOUR_PROJECT.supabase.co
@@ -43,12 +53,12 @@ npm install
 npm run dev
 ```
 
-Without Supabase variables, local development uses D1/R2 and the starter's mock staff identity. This preview identity is enabled only in development. Saved preview content and analytics do not transfer into Supabase automatically. The first real administrator sign-in imports the repository's baseline content.
+Without Supabase variables, the Cloudflare development preview uses D1/R2 and the starter's mock staff identity. This preview identity is enabled only in Cloudflare development. Saved preview content and analytics do not transfer into Supabase automatically. The first real administrator sign-in imports the repository's baseline content. Native Next.js always requires Supabase for staff access.
 
 When using local D1 for the first time, build and apply the checked-in SQLite migrations to the local database:
 
 ```sh
-npm run build
+npm run build:cloudflare
 node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 migrations apply DB --local --config dist/server/wrangler.json --persist-to .wrangler/state
 ```
 
@@ -74,4 +84,4 @@ npm test
 npm run build
 ```
 
-The tests apply the actual Supabase migration to an isolated PostgreSQL-compatible test database. They verify public/draft access, role restrictions, audit protection, publication evidence, media privacy, analytics access and rate limits. They do not connect to a production Supabase project.
+The tests apply the actual Supabase migration to an isolated PostgreSQL-compatible test database. They verify public/draft access, role restrictions, audit protection, publication evidence, media privacy, analytics access and rate limits. Hosting tests cover visitor headers and same-origin submission checks. They do not connect to a production Supabase project.

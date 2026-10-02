@@ -2,6 +2,8 @@ import { z } from 'zod';
 import { staff, canPublish, sameOrigin } from '@/lib/permissions';
 import { fingerprint, consumeRateLimit, recordVisit, audienceReport } from '@/lib/analytics';
 import { publicAnalyticsPath } from '@/lib/analytics-data';
+import { runtimePlatform } from '@/lib/runtime-env';
+import { visitorContext } from '@/lib/visitor-context';
 const schema = z.object({ id: z.string().uuid(), path: z.string().refine(publicAnalyticsPath), event: z.enum(['pageview', 'engagement']), duration: z.number().int().min(0).max(7200).default(0), referrer: z.string().max(253).regex(/^[a-zA-Z0-9.-]*$/).default(''), device: z.enum(['desktop', 'tablet', 'mobile']).default('desktop') }).strict();
 export async function GET(request: Request) { try {
     const user = await staff();
@@ -28,12 +30,8 @@ export async function POST(request: Request) { try {
     const data = result.data, hash = await fingerprint(request, 'analytics');
     if (!await consumeRateLimit('analytics:' + hash, 300, 3600))
         return new Response(null, { status: 429 });
-    const country = ((request as Request & {
-        cf?: {
-            country?: string;
-        };
-    }).cf?.country || request.headers.get('cf-ipcountry') || '').toUpperCase();
-    await recordVisit({ ...data, visitorHash: hash, country: /^[A-Z]{2}$/.test(country) ? country : '' });
+    const { country } = visitorContext(request, runtimePlatform);
+    await recordVisit({ ...data, visitorHash: hash, country });
     return new Response(null, { status: 204 });
 }
 catch {

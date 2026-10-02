@@ -1,4 +1,4 @@
-import { env } from 'cloudflare:workers';
+import { env, isDevelopment } from '@/lib/runtime-env';
 import { cookies } from 'next/headers';
 import { createClient } from '@supabase/supabase-js';
 import { createServerClient } from '@supabase/ssr';
@@ -9,7 +9,7 @@ export function publicClient() { if (!supabaseConfigured())
     throw new Error('Supabase is not connected.'); return createClient(runtimeValue('SUPABASE_URL'), runtimeValue('SUPABASE_PUBLISHABLE_KEY'), { auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false } }); }
 export function serviceClient() { if (!serviceConfigured())
     throw new Error('Supabase server access is not configured.'); return createClient(runtimeValue('SUPABASE_URL'), runtimeValue('SUPABASE_SECRET_KEY'), { auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false } }); }
-export async function serverClient() { const jar = await cookies(); return createServerClient(runtimeValue('SUPABASE_URL'), runtimeValue('SUPABASE_PUBLISHABLE_KEY'), { cookieOptions: { httpOnly: true, secure: !import.meta.env.DEV, sameSite: 'lax', path: '/' }, cookies: { getAll: () => jar.getAll(), setAll(values) { try {
+export async function serverClient() { const jar = await cookies(); return createServerClient(runtimeValue('SUPABASE_URL'), runtimeValue('SUPABASE_PUBLISHABLE_KEY'), { cookieOptions: { httpOnly: true, secure: !isDevelopment, sameSite: 'lax', path: '/' }, cookies: { getAll: () => jar.getAll(), setAll(values) { try {
             values.forEach(({ name, value, options }) => jar.set(name, value, options));
         }
         catch { /* Pages cannot set cookies; API requests refresh them. */ } } } }); }

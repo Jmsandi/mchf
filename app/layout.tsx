@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import VisitorTracker from "@/components/site/visitor-tracker";
+import {siteUrl} from "@/lib/site-url";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mchf-health-foundation.salty-tick-4448.chatgpt.site"),
+  metadataBase: new URL(siteUrl()),
   alternates: { canonical: "/" },
   openGraph: {type: "website", title: "Maternal and Child Health Foundation", description: "Every mother. Every newborn. Every community."},
   title: "MCHF | Every mother. Every newborn. Every community.",

@@ -1,4 +1,4 @@
-import { env } from 'cloudflare:workers';
+import { env } from '@/lib/runtime-env';
 import { baseRecords, ContentRecord } from './content';
 import { isPublicRecord } from './content-policy';
 import { supabaseConfigured, publicClient, serverClient, serviceClient, requireResult } from './supabase';

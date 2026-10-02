@@ -1,3 +1,5 @@
+import {fileURLToPath} from 'node:url';
+import {readFile} from 'node:fs/promises';
 import vinext from "vinext";
 import { defineConfig } from "vite";
 import hostingConfig from "./.openai/hosting.json";
@@ -56,6 +58,16 @@ export default defineConfig(async () => {
       ...(isCodexSeatbeltSandbox ? { watch: { useFsEvents: false, usePolling: true } } : {}),
     },
     plugins: [
+      {
+        name: 'mchf:cloudflare-runtime',
+        enforce: 'pre',
+        // Vinext prepends its TypeScript aliases, so select the adapter after resolution.
+        load(id: string) {
+          if (id === fileURLToPath(new URL('./lib/runtime-env.ts', import.meta.url))) {
+            return readFile(new URL('./lib/runtime-cloudflare.ts', import.meta.url), 'utf8');
+          }
+        },
+      },
       vinext(),
       sites({ mockAuth: !managedLinux }),
       cloudflare({
