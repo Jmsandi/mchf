@@ -188,6 +188,9 @@
 @media(max-width:760px){.admin-sidebar-account{display:flex;margin-top:14px;padding-top:14px}.admin-sidebar-account strong{font-size:12px}.admin-sidebar-account button{padding:8px}}
 .admin-nav{justify-content:flex-start!important}
 
+/* The navigation drawer needs an opaque surface above the page backdrop. */
+.mobile-panel[data-slot="sheet-content"]{background:#fff;color:var(--ink);border-left:1px solid var(--border);box-shadow:-12px 0 40px #102e4326}
+
 /* Preserve the full composition and lettering in MCHF's supplied programme artwork. */
 .page-hero-photo.supplied-artwork img{object-fit:contain;background:#f3f6f4;padding:12px;min-height:0;flex:none}
 .programme-card.supplied-artwork .programme-card-photo{object-fit:contain;height:235px;padding:12px;background:#f3f6f4}
