@@ -127,10 +127,10 @@
 .education-further>span{font-size:12px;font-weight:700;letter-spacing:1px;color:var(--muted)}
 .education-further a{display:flex;align-items:center;gap:10px;color:var(--page-accent,var(--teal));font-weight:600;font-size:15px}
 @media(max-width:640px){.education-further{align-items:flex-start;flex-direction:column;gap:12px}}
-.artwork-credit{margin:0;background:var(--page-tint,#eef5fa);border-bottom:3px solid var(--page-accent,var(--teal))}
-.artwork-credit img{width:100%;aspect-ratio:3/2;object-fit:cover}
-.artwork-credit figcaption{padding:22px;font-size:16px;line-height:1.5}
-.artwork-credit figcaption span{display:block;color:var(--muted);font-size:13px;margin-top:10px}
+.photo-credit{margin:0;background:var(--page-tint,#eef5fa);border-bottom:3px solid var(--page-accent,var(--teal))}
+.photo-credit img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.photo-credit figcaption{padding:22px;font-size:16px;line-height:1.5}
+.photo-credit figcaption span{display:block;color:var(--muted);font-size:13px;margin-top:10px}
 .guide-chapter{margin:35px 0;padding-top:25px;border-top:1px solid #dae4df}
 .guide-chapter h2{font-size:30px;margin-bottom:16px}
 
@@ -191,26 +191,19 @@
 /* The navigation drawer needs an opaque surface above the page backdrop. */
 .mobile-panel[data-slot="sheet-content"]{background:#fff;color:var(--ink);border-left:1px solid var(--border);box-shadow:-12px 0 40px #102e4326}
 
-/* Preserve the full composition and lettering in MCHF's supplied programme artwork. */
-.page-hero-photo.supplied-artwork img{object-fit:contain;background:#f3f6f4;padding:12px;min-height:0;flex:none}
-.programme-card.supplied-artwork .programme-card-photo{object-fit:contain;height:235px;padding:12px;background:#f3f6f4}
-.community-photo.supplied-artwork{border:1px solid #dce5dd;background:white;box-shadow:0 18px 45px #294b3610}
-.community-photo.supplied-artwork img{height:auto;object-fit:contain;object-position:center;display:block}
+/* Retain the supplied connected-care photograph beside the approach text. */
 .strategy-insights .insight-photo img{height:310px}
-.insight-photo.supplied-artwork{background:#f3f6f4}
-.insight-photo.supplied-artwork img{object-fit:contain;padding:12px 12px 38px}
-.insight-photo.supplied-artwork:hover img{transform:none}
-.document-photo.supplied-artwork{object-fit:contain;background:#f3f6f4;padding:12px}
 .approach-image.reviewed-approach{min-height:0;display:flex;align-items:center;padding:50px;background:#ecf0f1}
 .approach-image.reviewed-approach img{position:static;height:auto;object-fit:contain;object-position:center}
 .approach-image.reviewed-approach:after{display:none}
 .approach-image.reviewed-approach>span{color:#234a53;line-height:1.8}
 @media(max-width:850px){.approach-image.reviewed-approach{min-height:360px;padding:45px 40px 75px}}
 @media(max-width:640px){
- .page-hero-photo.supplied-artwork img{height:auto;min-height:0;max-height:none;padding:10px}
- .programme-card.supplied-artwork .programme-card-photo{height:auto;aspect-ratio:1.5;object-fit:contain;padding:10px}
- .document-photo.supplied-artwork{height:280px}
  .approach-image.reviewed-approach{min-height:270px;padding:35px 20px 65px}
  .strategy-insights .insight-photo img{height:310px}
  .board-profile-portfolio>p{font-size:15px}
 }
+
+.education-intro figcaption a,.photo-credit-links a,.education-section .source-note a{text-decoration:underline;text-underline-offset:3px}
+.photo-credit-links{display:flex;flex-wrap:wrap;gap:12px 20px;margin-top:16px}
+.photo-credit-links a{display:inline-flex;align-items:center;gap:5px;font-size:13px;color:var(--page-deep,var(--navy))}

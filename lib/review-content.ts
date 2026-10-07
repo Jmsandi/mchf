@@ -1,5 +1,6 @@
 import {boardMembers} from './board';
 import {reviewImages} from './review-images';
+import {retiredImageReplacements} from './stock-images';
 import type {ContentRecord} from './content';
 
 const imageUpdates = [
@@ -28,6 +29,14 @@ export function applyReviewDefaults(record: ContentRecord): ContentRecord {
   if (update) {
     const asset = update[2];
     result = {...result, image: asset.image, meta: {...result.meta, alt: asset.alt, imageCaption: asset.caption}};
+  }
+  const replacement = retiredImageReplacements[result.image];
+  if (replacement) {
+    result = {...result, image: replacement.image, meta: {
+      ...result.meta,
+      alt: replacement.alt,
+      imageCaption: replacement.caption,
+    }};
   }
   return result;
 }
