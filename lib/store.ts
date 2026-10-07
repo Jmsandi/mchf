@@ -1,10 +1,11 @@
 import { env } from '@/lib/runtime-env';
 import { baseRecords, ContentRecord } from './content';
+import { applyReviewDefaults } from './review-content';
 import { isPublicRecord } from './content-policy';
 import { supabaseConfigured, publicClient, serverClient, serviceClient, requireResult } from './supabase';
 export function database() { if (!env.DB)
     throw new Error('Content service unavailable'); return env.DB; }
-export function parseRecord(r: any): ContentRecord { return { ...r, updatedAt: r.updated_at || r.updatedAt, meta: typeof r.meta === 'string' ? JSON.parse(r.meta) : r.meta || {} }; }
+export function parseRecord(r: any): ContentRecord { return applyReviewDefaults({ ...r, updatedAt: r.updated_at || r.updatedAt, meta: typeof r.meta === 'string' ? JSON.parse(r.meta) : r.meta || {} }); }
 export function toSupabaseRecord(r: ContentRecord, actor: string) { return { id: r.id, kind: r.kind, slug: r.slug, title: r.title, summary: r.summary, body: r.body, status: r.status, programme: r.programme, year: r.year, topic: r.topic, location: r.location, image: r.image, file: r.file, source: r.source, meta: r.meta, publish_at: r.meta.publishAt || null, updated_by: actor, updated_at: new Date().toISOString() }; }
 export async function getContent(all = false): Promise<ContentRecord[]> {
     if (supabaseConfigured()) {

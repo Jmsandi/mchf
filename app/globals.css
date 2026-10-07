@@ -168,6 +168,7 @@
 .board-profile-position{font-size:18px;color:#d4e7df;margin:22px 0}
 .board-profile-portfolio{padding:28px 0;border-top:1px solid #ffffff35;border-bottom:1px solid #ffffff35;margin:25px 0}
 .board-profile-portfolio .eyebrow{margin-bottom:12px}.board-profile-portfolio h2{font-family:var(--sans);letter-spacing:0;font-size:24px;line-height:1.5}
+.board-profile-portfolio>p{font-size:16px;line-height:1.8;color:#dbe8e8;margin:16px 0 0;max-width:640px}
 .board-profile-hero .board-contacts p,.board-profile-hero .board-contacts a{color:#e1ede8;font-size:16px}.board-profile-hero .board-contacts svg{color:#efcb91}
 .board-profile-body{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px}.board-profile-body p{font-size:17px;line-height:1.9;margin-bottom:20px}
 .board-programme-link{padding:28px;background:var(--page-tint,#eef5fa);border-top:3px solid var(--page-accent,var(--teal));margin:30px 0}
@@ -186,3 +187,27 @@
 
 @media(max-width:760px){.admin-sidebar-account{display:flex;margin-top:14px;padding-top:14px}.admin-sidebar-account strong{font-size:12px}.admin-sidebar-account button{padding:8px}}
 .admin-nav{justify-content:flex-start!important}
+
+/* Preserve the full composition and lettering in MCHF's supplied programme artwork. */
+.page-hero-photo.supplied-artwork img{object-fit:contain;background:#f3f6f4;padding:12px;min-height:0;flex:none}
+.programme-card.supplied-artwork .programme-card-photo{object-fit:contain;height:235px;padding:12px;background:#f3f6f4}
+.community-photo.supplied-artwork{border:1px solid #dce5dd;background:white;box-shadow:0 18px 45px #294b3610}
+.community-photo.supplied-artwork img{height:auto;object-fit:contain;object-position:center;display:block}
+.strategy-insights .insight-photo img{height:310px}
+.insight-photo.supplied-artwork{background:#f3f6f4}
+.insight-photo.supplied-artwork img{object-fit:contain;padding:12px 12px 38px}
+.insight-photo.supplied-artwork:hover img{transform:none}
+.document-photo.supplied-artwork{object-fit:contain;background:#f3f6f4;padding:12px}
+.approach-image.reviewed-approach{min-height:0;display:flex;align-items:center;padding:50px;background:#ecf0f1}
+.approach-image.reviewed-approach img{position:static;height:auto;object-fit:contain;object-position:center}
+.approach-image.reviewed-approach:after{display:none}
+.approach-image.reviewed-approach>span{color:#234a53;line-height:1.8}
+@media(max-width:850px){.approach-image.reviewed-approach{min-height:360px;padding:45px 40px 75px}}
+@media(max-width:640px){
+ .page-hero-photo.supplied-artwork img{height:auto;min-height:0;max-height:none;padding:10px}
+ .programme-card.supplied-artwork .programme-card-photo{height:auto;aspect-ratio:1.5;object-fit:contain;padding:10px}
+ .document-photo.supplied-artwork{height:280px}
+ .approach-image.reviewed-approach{min-height:270px;padding:35px 20px 65px}
+ .strategy-insights .insight-photo img{height:310px}
+ .board-profile-portfolio>p{font-size:15px}
+}

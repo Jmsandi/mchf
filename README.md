@@ -74,6 +74,8 @@ The supplied Strategic Plan and Articles inform the baseline programme content. 
 
 Missing operational news, research, projects, results and vacancies remain empty until staff publish them. Educational material and contextual photography are identified separately from verified MCHF results. Publishing a result requires its evidence source, definition, methodology and date.
 
+The October 2026 website review supplies the updated programme imagery, corrects the chairperson to Mariama Haja Turay and the treasurer to Johnnet Sesay, and adds the five board portfolio descriptions. Existing profile URLs redirect to the corrected names. The original record IDs are retained so imported profiles are not duplicated. Superseded baseline fields in saved records receive the review corrections while custom staff edits and publication status remain intact.
+
 Original source DOCX/PPTX files remain local and ignored by Git, following the code-only publication scope. Public document links require their corresponding approved assets in the hosting environment.
 
 ## Verification
