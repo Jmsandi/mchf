@@ -28,7 +28,7 @@ Published records appear on the matching public pages. Programme-linked projects
 
 1. Select the intended Supabase project. This repository does not contain project credentials.
 2. Apply [`supabase/migrations/202610010001_mchf_platform.sql`](supabase/migrations/202610010001_mchf_platform.sql) once, using the Supabase SQL Editor or migration tooling. It creates the `mchf_*` tables, access policies, reporting functions and private `mchf-media` storage bucket.
-3. Set the following **server runtime** variables. For native Next.js development, copy `.env.example` to the ignored `.env.local` file and run `npm run dev:next`. For the Cloudflare preview, use `.dev.vars` and `npm run dev`. For Vercel, set them in the project's Environment Variables; for Cloudflare hosting, use the worker's runtime environment and secret settings.
+3. Set the following **server runtime** variables. For native Next.js development, copy `.env.example` to the ignored `.env.local` file and run `npm run dev`. For the Cloudflare preview, use `.dev.vars` and `npm run dev:cloudflare`. For Vercel, set them in the project's Environment Variables; for Cloudflare hosting, use the worker's runtime environment and secret settings.
 
 ```dotenv
 SUPABASE_URL=https://YOUR_PROJECT.supabase.co
@@ -53,7 +53,9 @@ npm install
 npm run dev
 ```
 
-Without Supabase variables, the Cloudflare development preview uses D1/R2 and the starter's mock staff identity. This preview identity is enabled only in Cloudflare development. Saved preview content and analytics do not transfer into Supabase automatically. The first real administrator sign-in imports the repository's baseline content. Native Next.js always requires Supabase for staff access.
+The default development server runs native Next.js at `http://localhost:5173`, matching the Vercel deployment runtime. Without Supabase variables, public pages display the repository's baseline content. Native Next.js requires Supabase for staff access and persistent analytics. `npm run dev:next` remains an alias for the same server.
+
+The separate `npm run dev:cloudflare` preview uses D1/R2 and the starter's mock staff identity when Supabase variables are absent. This preview identity is enabled only in Cloudflare development. Saved preview content and analytics do not transfer into Supabase automatically. The first real administrator sign-in imports the repository's baseline content.
 
 When using local D1 for the first time, build and apply the checked-in SQLite migrations to the local database:
 
