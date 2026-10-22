@@ -1,3 +1,5 @@
+import {sierraLeoneSummaries} from './sierra-leone';
+
 export const pageCatalog = [
     { path: 'home', label: 'Home', title: 'Every mother.\nEvery newborn.\nEvery community.', summary: 'Advancing equitable health through community-led action, evidence and stronger health systems.', kinds: ['news', 'insight', 'project'], hint: 'Featured projects, daily insights and news appear on the home page.' },
     { path: 'about', label: 'About MCHF', title: 'Health equity begins with people.', summary: 'Community action, research and stronger services for equitable health.', kinds: ['leadership'], hint: 'Edit the introduction or update the board profiles.' },
@@ -18,5 +20,10 @@ export const pageCatalog = [
     { path: 'contact', label: 'Contact', title: 'Let’s start a conversation.', summary: 'Connect with MCHF about partnerships, research, programmes or general institutional inquiries.', kinds: ['contact'], hint: 'Edit the foundation’s official contact details.' },
     { path: 'get-involved', label: 'Get involved', title: 'A healthier future is shared work.', summary: 'Contribute expertise, build partnerships and help communities shape lasting health improvements.', kinds: ['page'], hint: 'Maintain opportunities to take part in the foundation’s work.' },
     { path: 'strategic-plan-2027-2031', label: 'Strategic plan', title: 'A clear direction for lasting change.', summary: 'The MCHF Strategic Plan 2027–2031 connects five programme areas through a single framework for implementation, evidence and accountability.', kinds: ['publication'], hint: 'Maintain the strategy introduction and source documents.' },
+    { path: 'sierra-leone', label: 'Our Sierra Leone focus', title: 'One country. Every community.', summary: sierraLeoneSummaries['sierra-leone'], kinds: ['project', 'story'], hint: 'Maintain the national introduction. Confirm delivery districts in each project record.' },
 ];
+export const originalPageSummaries = Object.fromEntries(pageCatalog.map(page => [page.path, page.summary]));
+for (const page of pageCatalog) {
+  if (sierraLeoneSummaries[page.path]) page.summary = sierraLeoneSummaries[page.path];
+}
 export const kindLabels: Record<string, string> = { page: 'Website page', programme: 'Programme', intervention: 'Intervention', activity: 'Priority activity', project: 'Project', research: 'Research study', publication: 'Publication', report: 'Report', news: 'News update', insight: 'Daily insight', event: 'Event', leadership: 'Board profile', partner: 'Partner', impact: 'Verified result', story: 'Community story', resource: 'Resource', career: 'Vacancy', contact: 'Official contact', setting: 'Site setting' };

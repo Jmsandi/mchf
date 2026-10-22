@@ -1,6 +1,8 @@
 import {boardMembers} from './board';
 import {reviewImages} from './review-images';
 import {retiredImageReplacements} from './stock-images';
+import {originalPageSummaries} from './page-catalog';
+import {sierraLeoneSummaries} from './sierra-leone';
 import type {ContentRecord} from './content';
 
 const imageUpdates = [
@@ -15,6 +17,9 @@ const imageUpdates = [
 /** Update superseded baseline fields in saved records while preserving staff edits and publication state. */
 export function applyReviewDefaults(record: ContentRecord): ContentRecord {
   let result = {...record, meta: {...record.meta}};
+  if (result.kind === 'page' && result.summary === originalPageSummaries[result.slug] && sierraLeoneSummaries[result.slug]) {
+    result.summary = sierraLeoneSummaries[result.slug];
+  }
   const member = boardMembers.find(member => member.id === record.id && record.kind === 'leadership');
   if (member) {
     if (member.previousName && result.title === member.previousName) {

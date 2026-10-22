@@ -1,9 +1,10 @@
 import {reviewImages} from '@/lib/review-images';
 export type PageVisual = {tone:'blue'|'green'|'teal'|'gold'|'clay';image?:string;alt?:string;caption?:string};
-const community={image:'/images/hero.jpg',alt:'Mother and child at a community gathering in Sierra Leone',caption:'Community health · Sierra Leone'};
-const family={image:'/images/mother-child.jpg',alt:'A mother with her young child in Malawi',caption:'Maternal & child health · Malawi'};
-const care={image:'/images/health-worker.jpg',alt:'A nurse caring for newborns at Koidu Government Hospital in Sierra Leone',caption:'Frontline care · Sierra Leone'};
-const prevention={image:'/images/immunization.jpg',alt:'A child receiving an immunization in Ethiopia',caption:'Immunization & prevention · Ethiopia'};
+import {stockImages} from '@/lib/stock-images';
+const community=stockImages.hero;
+const family=stockImages.maternal;
+const care=stockImages.clinicalCare;
+const prevention=stockImages.vaccination;
 export function pageVisual(path:string):PageVisual {
  if(['privacy','accessibility','image-credits','search'].includes(path))return {tone:'blue'};
  if(path.includes('immunization'))return {tone:'green',...prevention};

@@ -6,91 +6,127 @@ export type StockPhoto = {
   source: string;
   download: string;
   license: string;
+  licenseLabel: string;
+  location: string;
+  year: string;
 };
 
-const license = 'https://www.pexels.com/license/';
-
-/** Licensed photographs downloaded on 7 October 2026 and resized for local delivery. */
+/** Location-verified Sierra Leone photographs; downloaded and resized on 22 October 2026. */
 export const stockImages = {
-  maternal: {
-    image: '/images/stock/maternal-care.jpg',
-    alt: 'A smiling mother holding her baby in a bright room',
-    caption: 'Care through the stages of life',
-    photographer: 'William Fortunato',
-    source: 'https://www.pexels.com/photo/smiling-mother-and-baby-looking-at-camera-6393377/',
-    download: 'https://images.pexels.com/photos/6393377/pexels-photo-6393377.jpeg',
-    license,
+  "maternal": {
+    "image": "/images/sierra-leone/mother-and-child.jpg",
+    "alt": "A mother holding her child outdoors in Sierra Leone",
+    "caption": "Families and community life · Sierra Leone",
+    "photographer": "Alicia Clark / USAID",
+    "source": "https://commons.wikimedia.org/wiki/File:Sierra_Leone_Ebola_Recovery,_Community_Engagment_and_Health_Posts_(25166400034).jpg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/6/68/Sierra_Leone_Ebola_Recovery%2C_Community_Engagment_and_Health_Posts_%2825166400034%29.jpg",
+    "license": "https://commons.wikimedia.org/wiki/File:Sierra_Leone_Ebola_Recovery,_Community_Engagment_and_Health_Posts_(25166400034).jpg#Licensing",
+    "licenseLabel": "Public domain",
+    "location": "Sierra Leone",
+    "year": "2016"
   },
-  vaccination: {
-    image: '/images/stock/vaccination.jpg',
-    alt: 'A health professional administering a vaccination to a seated woman, both wearing masks',
-    caption: 'Prevention through trusted care',
-    photographer: 'Gustavo Fring',
-    source: 'https://www.pexels.com/photo/a-woman-getting-vaccinated-8770701/',
-    download: 'https://images.pexels.com/photos/8770701/pexels-photo-8770701.jpeg',
-    license,
+  "vaccination": {
+    "image": "/images/sierra-leone/rural-health-promotion.jpg",
+    "alt": "Health promoters with a bicycle used to reach rural communities in Sierra Leone",
+    "caption": "Community health promotion · Sierra Leone",
+    "photographer": "P. Nshimirimana / USAID",
+    "source": "https://commons.wikimedia.org/wiki/File:Rural_health_care_(8329317253).jpg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Rural_health_care_%288329317253%29.jpg",
+    "license": "https://commons.wikimedia.org/wiki/File:Rural_health_care_(8329317253).jpg#Licensing",
+    "licenseLabel": "Public domain",
+    "location": "Sierra Leone",
+    "year": "2012"
   },
-  communityLearning: {
-    image: '/images/stock/community-learning.jpg',
-    alt: 'Women exchanging ideas around a meeting table',
-    caption: 'Participation starts with listening',
-    photographer: 'RDNE Stock project',
-    source: 'https://www.pexels.com/photo/office-indoors-diversity-collaboration-7490884/',
-    download: 'https://images.pexels.com/photos/7490884/pexels-photo-7490884.jpeg',
-    license,
+  "communityLearning": {
+    "image": "/images/sierra-leone/community-theatre-mile-91.jpg",
+    "alt": "An audience attending a community health theatre performance in Mile 91, Sierra Leone",
+    "caption": "Community health education · Mile 91",
+    "photographer": "Annabel Symington",
+    "source": "https://commons.wikimedia.org/wiki/File:Flickr_-_stringer_bel_-_Community_theatre_in_Mile_91,_Sierra_Leone.jpg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Flickr_-_stringer_bel_-_Community_theatre_in_Mile_91%2C_Sierra_Leone.jpg",
+    "license": "https://creativecommons.org/licenses/by/2.0",
+    "licenseLabel": "CC BY 2.0",
+    "location": "Mile 91, Tonkolili District",
+    "year": "2009"
   },
-  researchLearning: {
-    image: '/images/stock/research-learning.jpg',
-    alt: 'Researchers working with laboratory equipment and sample containers',
-    caption: 'Learning through careful investigation',
-    photographer: 'Polina Tankilevitch',
-    source: 'https://www.pexels.com/photo/scientists-in-laboratory-3735780/',
-    download: 'https://images.pexels.com/photos/3735780/pexels-photo-3735780.jpeg',
-    license,
+  "researchLearning": {
+    "image": "/images/sierra-leone/koidu-health-workers.jpg",
+    "alt": "Health workers reviewing information inside Koidu Government Hospital in Sierra Leone",
+    "caption": "Frontline health workers · Koidu",
+    "photographer": "John Green / vlogbrothers",
+    "source": "https://commons.wikimedia.org/wiki/File:Koidu_Government_Hospital_Sierra_Leone_2020_04.png",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/5/50/Koidu_Government_Hospital_Sierra_Leone_2020_04.png",
+    "license": "https://creativecommons.org/licenses/by/3.0",
+    "licenseLabel": "CC BY 3.0",
+    "location": "Koidu, Kono District",
+    "year": "2020"
   },
-  clinicalCare: {
-    image: '/images/stock/clinical-care.jpg',
-    alt: 'A clinician discussing a care document with a patient in a clinic hallway',
-    caption: 'Clear communication, connected care',
-    photographer: 'Klaus Nielsen',
-    source: 'https://www.pexels.com/photo/doctor-showing-diagnosis-to-black-woman-patient-in-hallway-of-clinic-6303645/',
-    download: 'https://images.pexels.com/photos/6303645/pexels-photo-6303645.jpeg',
-    license,
+  "clinicalCare": {
+    "image": "/images/sierra-leone/koidu-newborn-care.jpg",
+    "alt": "A nurse caring for a baby in the Special Care Baby Unit at Koidu Government Hospital, Sierra Leone",
+    "caption": "Newborn care · Koidu",
+    "photographer": "John Green / vlogbrothers",
+    "source": "https://commons.wikimedia.org/wiki/File:Baby_unit_of_Koidu_Government_Hospital_Sierra_Leone_02.png",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Baby_unit_of_Koidu_Government_Hospital_Sierra_Leone_02.png",
+    "license": "https://creativecommons.org/licenses/by/3.0",
+    "licenseLabel": "CC BY 3.0",
+    "location": "Koidu, Kono District",
+    "year": "2023"
   },
-  healthSystems: {
-    image: '/images/stock/health-system-team.jpg',
-    alt: 'Health workers reviewing information together in a bright clinic',
-    caption: 'Stronger health systems through collaboration',
-    photographer: 'Kaboompics',
-    source: 'https://www.pexels.com/photo/health-care-workers-working-together-6627926/',
-    download: 'https://images.pexels.com/photos/6627926/pexels-photo-6627926.jpeg',
-    license,
+  "healthSystems": {
+    "image": "/images/sierra-leone/kenema-health-worker-transport.jpg",
+    "alt": "Motorcycles distributed for health workers by the district health team in Kenema, Sierra Leone",
+    "caption": "Supporting health-worker transport · Kenema",
+    "photographer": "Paul Lamin Musa",
+    "source": "https://commons.wikimedia.org/wiki/File:IMotor_Bikes_for_Health_Workers_01.jpg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/f/f7/IMotor_Bikes_for_Health_Workers_01.jpg",
+    "license": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "licenseLabel": "CC0",
+    "location": "Kenema District",
+    "year": "2026"
   },
-  community: {
-    image: '/images/stock/community-partnerships.jpg',
-    alt: 'A group of women sharing ideas and planning together around a table',
-    caption: 'Communities are partners in change',
-    photographer: 'Yan Krukau',
-    source: 'https://www.pexels.com/photo/women-discussing-a-work-together-8837496/',
-    download: 'https://images.pexels.com/photos/8837496/pexels-photo-8837496.jpeg',
-    license,
+  "community": {
+    "image": "/images/sierra-leone/community-dialogue.jpg",
+    "alt": "Community members gathered outdoors for a discussion in Sierra Leone",
+    "caption": "Community dialogue · Sierra Leone",
+    "photographer": "Alicia Clark / USAID",
+    "source": "https://commons.wikimedia.org/wiki/File:Sierra_Leone_Ebola_Recovery,_Community_Engagment_and_Health_Posts_(25770814266).jpg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Sierra_Leone_Ebola_Recovery%2C_Community_Engagment_and_Health_Posts_%2825770814266%29.jpg",
+    "license": "https://commons.wikimedia.org/wiki/File:Sierra_Leone_Ebola_Recovery,_Community_Engagment_and_Health_Posts_(25770814266).jpg#Licensing",
+    "licenseLabel": "Public domain",
+    "location": "Sierra Leone",
+    "year": "2016"
   },
-  evidence: {
-    image: '/images/stock/evidence-research.jpg',
-    alt: 'A researcher wearing safety glasses examining a sample in a laboratory',
-    caption: 'Evidence that informs better decisions',
-    photographer: 'RF._.studio',
-    source: 'https://www.pexels.com/photo/focused-african-american-researcher-conducting-biochemical-experiment-in-clinic-3825434/',
-    download: 'https://images.pexels.com/photos/3825434/pexels-photo-3825434.jpeg',
-    license,
+  "evidence": {
+    "image": "/images/sierra-leone/port-loko-laboratory.jpg",
+    "alt": "A laboratory technician explaining sample testing to visitors in Port Loko, Sierra Leone, in 2014",
+    "caption": "Laboratory capacity · Port Loko, 2014",
+    "photographer": "Cpl Jamie Peters / RLC / DFID",
+    "source": "https://commons.wikimedia.org/wiki/File:Justine_Greening_in_Sierra_leone_(15417131133).jpg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Justine_Greening_in_Sierra_leone_%2815417131133%29.jpg",
+    "license": "https://creativecommons.org/licenses/by-sa/2.0",
+    "licenseLabel": "CC BY-SA 2.0",
+    "location": "Port Loko District",
+    "year": "2014"
   },
+  "hero": {
+    "image": "/images/hero.jpg",
+    "alt": "A mother and child at a gathering outside a children’s hospital in Sierra Leone",
+    "caption": "Families and access to care · Sierra Leone",
+    "photographer": "Robert Yates / DFID",
+    "source": "https://commons.wikimedia.org/wiki/File:Maternal_health_(4798750001).jpg",
+    "download": "https://live.staticflickr.com/4115/4798750001_aaeefe7620_o.jpg",
+    "license": "https://creativecommons.org/licenses/by/2.0/",
+    "licenseLabel": "CC BY 2.0",
+    "location": "Sierra Leone",
+    "year": "2010"
+  }
 } satisfies Record<string, StockPhoto>;
 
 export function stockImageFor(image?: string) {
   return Object.values(stockImages).find(photo => photo.image === image);
 }
 
-/** Replace exact retired asset URLs in previously saved CMS records. */
 export const retiredImageReplacements: Record<string, StockPhoto> = {
   '/images/learning-rmnch.jpg': stockImages.maternal,
   '/images/learning-immunization.jpg': stockImages.vaccination,
@@ -100,4 +136,17 @@ export const retiredImageReplacements: Record<string, StockPhoto> = {
   '/images/review/health-systems-partnerships.jpg': stockImages.healthSystems,
   '/images/review/community-partnerships.jpg': stockImages.community,
   '/images/review/evidence-to-action.jpg': stockImages.evidence,
+  "/images/stock/maternal-care.jpg": stockImages.maternal,
+  "/images/stock/vaccination.jpg": stockImages.vaccination,
+  "/images/stock/community-learning.jpg": stockImages.communityLearning,
+  "/images/stock/research-learning.jpg": stockImages.researchLearning,
+  "/images/stock/clinical-care.jpg": stockImages.clinicalCare,
+  "/images/stock/health-system-team.jpg": stockImages.healthSystems,
+  "/images/stock/community-partnerships.jpg": stockImages.community,
+  "/images/stock/evidence-research.jpg": stockImages.evidence,
+  "/images/mother-child.jpg": stockImages.maternal,
+  "/images/immunization.jpg": stockImages.vaccination,
+  "/images/health-worker.jpg": stockImages.clinicalCare,
+  "/images/review/newborn-care.jpg": stockImages.clinicalCare,
+  "/images/review/connected-care.jpg": stockImages.community,
 };

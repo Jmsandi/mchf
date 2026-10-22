@@ -6,8 +6,8 @@ import {siteUrl} from "@/lib/site-url";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
   alternates: { canonical: "/" },
-  openGraph: {type: "website", title: "Maternal and Child Health Foundation", description: "Every mother. Every newborn. Every community."},
-  title: "MCHF | Every mother. Every newborn. Every community.",
+  openGraph: {type: "website", title: "Maternal and Child Health Foundation", description: "Every mother. Every newborn. Every community in Sierra Leone."},
+  title: "MCHF | Every mother. Every newborn. Every community in Sierra Leone.",
   description: "Maternal and Child Health Foundation advances equitable, evidence-based health in Sierra Leone through community action, research and stronger health systems.",
   other: {
     

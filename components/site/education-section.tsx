@@ -15,7 +15,7 @@ export function LearningPanel({lesson}: {lesson: Lesson}) {
         </div>
         {lesson.image && <figure>
           <img src={lesson.image} alt={photo?.alt || lesson.title} loading='lazy'/>
-          {photo && <figcaption>Photo: <a href={photo.source} target='_blank' rel='noreferrer'>{photo.photographer} / Pexels</a></figcaption>}
+          {photo && <figcaption>Photo: <a href={photo.source} target='_blank' rel='noreferrer'>{photo.photographer}</a></figcaption>}
         </figure>}
       </div>
       <div className='education-cards'>
@@ -41,18 +41,18 @@ export function LearningPanel({lesson}: {lesson: Lesson}) {
 function StockPhotographyCredits() {
   return <section className='section'>
     <div className='container'>
-      <span className='eyebrow'>LICENSED STOCK PHOTOGRAPHY</span>
-      <h2>People, care and collaboration.</h2>
-      <p className='learning-overview-intro'>These photographs introduce the website’s programme themes and learning topics. They are downloaded from Pexels, resized for display and served locally. They do not document MCHF projects or imply endorsement by the people pictured.</p>
+      <span className='eyebrow'>PHOTOGRAPHED IN SIERRA LEONE</span>
+      <h2>Sierra Leone, in focus.</h2>
+      <p className='learning-overview-intro'>Location-verified photographs of Sierra Leone’s communities and health settings. Source dates are shown because these photographs provide historical and geographic context. They have been resized and cropped for display and do not document MCHF activities or imply endorsement by the people pictured.</p>
       <div className='learning-overview-grid'>
         {Object.values(stockImages).map(photo => <figure className='photo-credit' key={photo.image}>
           <img src={photo.image} alt={photo.alt} loading='lazy'/>
           <figcaption>
             <strong>{photo.caption}</strong>
-            <span>Photo: {photo.photographer} / Pexels</span>
+            <span>Photo: {photo.photographer}</span><span>{photo.location} · {photo.year}</span>
             <div className='photo-credit-links'>
               <a href={photo.source} target='_blank' rel='noreferrer'>Original source<ArrowUpRight size={14}/></a>
-              <a href={photo.license} target='_blank' rel='noreferrer'>Pexels licence<ArrowUpRight size={14}/></a>
+              <a href={photo.license} target='_blank' rel='noreferrer'>{photo.licenseLabel}<ArrowUpRight size={14}/></a>
             </div>
           </figcaption>
         </figure>)}
@@ -86,7 +86,7 @@ export function EducationOverview() {
           </div>
         </Link>)}
       </div>
-      <p className='source-note'>Stock photographs provide context for the learning topics. <Link href='/image-credits'>View photography credits</Link>.</p>
+      <p className='source-note'>Photographs from Sierra Leone provide context for the learning topics. <Link href='/image-credits'>View photography credits</Link>.</p>
     </div>
   </section>;
 }
