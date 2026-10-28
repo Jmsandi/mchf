@@ -41,9 +41,9 @@ export function LearningPanel({lesson}: {lesson: Lesson}) {
 function StockPhotographyCredits() {
   return <section className='section'>
     <div className='container'>
-      <span className='eyebrow'>PHOTOGRAPHED IN SIERRA LEONE</span>
-      <h2>Sierra Leone, in focus.</h2>
-      <p className='learning-overview-intro'>Location-verified photographs of Sierra Leone’s communities and health settings. Source dates are shown because these photographs provide historical and geographic context. They have been resized and cropped for display and do not document MCHF activities or imply endorsement by the people pictured.</p>
+      <span className='eyebrow'>PHOTOGRAPHY & ATTRIBUTION</span>
+      <h2>People, care and collaboration.</h2>
+      <p className='learning-overview-intro'>Our image collection combines Sierra Leone documentary photographs with licensed stock photography. Stock images illustrate themes and are identified separately from photographs with a verified Sierra Leone location. Dates refer to the original photograph or source listing. They have been resized and cropped for display and do not document MCHF activities or imply endorsement by the people pictured.</p>
       <div className='learning-overview-grid'>
         {Object.values(stockImages).map(photo => <figure className='photo-credit' key={photo.image}>
           <img src={photo.image} alt={photo.alt} loading='lazy'/>
@@ -64,8 +64,9 @@ function StockPhotographyCredits() {
 export default function EducationSection({path}: {path: string}) {
   if (path.startsWith('resources/understanding-')) return null;
   const lesson = lessonFor(path);
+  const guideImageAlreadyShown = path.startsWith('programmes/') || ['knowledge', 'publications'].includes(path);
   return lesson ? <>
-    <LearningPanel lesson={lesson}/>
+    <LearningPanel lesson={guideImageAlreadyShown ? {...lesson, image: undefined} : lesson}/>
     {path === 'image-credits' && <StockPhotographyCredits/>}
   </> : null;
 }
@@ -86,7 +87,7 @@ export function EducationOverview() {
           </div>
         </Link>)}
       </div>
-      <p className='source-note'>Photographs from Sierra Leone provide context for the learning topics. <Link href='/image-credits'>View photography credits</Link>.</p>
+      <p className='source-note'>Documentary and stock photographs provide context for the learning topics. <Link href='/image-credits'>View photography credits</Link>.</p>
     </div>
   </section>;
 }

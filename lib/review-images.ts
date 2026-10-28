@@ -2,7 +2,7 @@ import {stockImages, stockImageFor} from './stock-images';
 
 export const reviewImages = {
   healthSystems: stockImages.healthSystems,
-  connectedCare: stockImages.community,
+  connectedCare: stockImages.connectedCare,
   community: stockImages.community,
   evidence: stockImages.evidence,
   newborn: stockImages.clinicalCare,

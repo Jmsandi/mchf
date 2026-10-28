@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./site-polish.css";
 import VisitorTracker from "@/components/site/visitor-tracker";
 import {siteUrl} from "@/lib/site-url";
 

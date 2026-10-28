@@ -1,0 +1,82 @@
+/* Shared layout corrections, kept separate so every route receives the same styles. */
+main#main.public-site :is(.article-content,.page-hero-inner>div,.contact-layout>div,.document-card>div,.programme-card,.form-panel,.board-card-content){min-width:0}
+main#main.public-site :is(.programme-grid,.library-results,.featured-grid,.focus-grid,.local-context-grid,.education-cards,.involvement-grid){align-items:stretch}
+main#main.public-site .page-hero-inner{align-items:center;gap:clamp(28px,4vw,56px)}
+main#main.public-site .page-hero-photo{align-self:center;min-width:0}
+main#main.public-site .page-hero-photo img{height:auto;min-height:0;max-height:400px;aspect-ratio:4/3;flex:none;object-fit:cover;object-position:50% 35%}
+main#main.public-site .page-hero-photo figcaption{overflow-wrap:anywhere}
+
+main#main.public-site .programme-card{--card-inset:28px;padding:var(--card-inset);min-height:0;overflow:hidden}
+main#main.public-site .programme-card .programme-card-photo{width:calc(100% + var(--card-inset) * 2);max-width:none;height:auto;aspect-ratio:16/10;flex:none;object-fit:cover;object-position:50% 35%;margin:calc(-1 * var(--card-inset)) calc(-1 * var(--card-inset)) 24px}
+main#main.public-site .programme-card h3{font-size:27px;line-height:1.25}
+main#main.public-site .programme-card .programme-meta{margin-bottom:16px}
+main#main.public-site .programme-callout{justify-content:center;min-height:380px}
+main#main.public-site .programme-callout .text-link{margin-top:28px}
+
+main#main.public-site .approach-home{align-items:stretch}
+main#main.public-site .approach-home .approach-image{min-height:580px;padding:0;overflow:hidden;background:#dce9e2}
+main#main.public-site .approach-home .approach-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+main#main.public-site .approach-home .approach-image::after{content:'';position:absolute;inset:65% 0 0;display:block;background:linear-gradient(0deg,#102e43bd,transparent)}
+main#main.public-site .approach-home .approach-image>span{color:#fff;left:36px;right:28px;bottom:30px;font-size:11px;line-height:1.7}
+main#main.public-site .community-feature-grid{align-items:center;gap:clamp(32px,5vw,72px)}
+main#main.public-site .community-photo img{height:auto;aspect-ratio:4/3;object-fit:cover;object-position:50% 35%}
+main#main.public-site .strategy-insights .insight-photo img{height:auto;aspect-ratio:16/10;object-fit:cover;object-position:50% 30%}
+
+main#main.public-site .document-card{gap:20px}
+main#main.public-site .document-card:has(.document-photo){display:flex;flex-direction:column;align-items:stretch;padding:0;overflow:hidden}
+main#main.public-site .document-card:has(.document-photo)>.document-photo{display:block;width:100%;min-width:0;height:auto;max-height:320px;aspect-ratio:16/10;object-fit:cover;object-position:50% 30%;flex:none;align-self:auto}
+main#main.public-site .document-card:has(.document-photo)>div{padding:25px;display:flex;flex-direction:column;flex:1}
+main#main.public-site .document-card h3{font-family:var(--serif);font-size:26px;font-weight:400;line-height:1.25}
+main#main.public-site .document-card p{font-size:15px;line-height:1.8}
+main#main.public-site .document-card .document-actions{display:flex;gap:12px 22px;flex-wrap:wrap;margin-top:auto;padding-top:22px}
+main#main.public-site .document-card .document-actions a{display:inline-flex;align-items:center;gap:8px}
+main#main.public-site .library-results{gap:26px}
+main#main.public-site .library-tools .filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:12px}
+main#main.public-site .library-tools .filter-select{width:100%!important;min-width:0!important;font-size:13px!important}
+main#main.public-site .library-search{min-width:0}
+main#main.public-site .library-search input{min-width:0;font-size:15px}
+main#main.public-site .results-count{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+main#main.public-site .form-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:20px}
+main#main.public-site .inquiry-form label{min-width:0}
+main#main.public-site .form-panel .filter-select{min-width:0!important;max-width:100%;font-size:14px!important}
+main#main.public-site .inquiry-form :is(input,textarea){max-width:100%;min-width:0}
+main#main.public-site .education-intro img,main#main.public-site .learning-overview-card>img{object-position:50% 30%}
+main#main.public-site .document-card img.document-photo[src='/images/stock/prevention-learning.jpg'],
+main#main.public-site :is(.education-intro,.learning-overview-card,.page-hero-photo,.photo-credit) img[src='/images/stock/prevention-learning.jpg']{object-position:50% 0%}
+main#main.public-site .education-source .text-link{white-space:normal}
+main#main.public-site .page-aside>.text-link{display:inline-flex;align-items:center;gap:8px}
+footer .footer-bottom>div{flex-wrap:wrap;gap:14px 24px}
+
+@media(max-width:1000px){
+  main#main.public-site .approach-home .approach-image{min-height:440px}
+  main#main.public-site .page-hero-inner{align-items:center}
+  main#main.public-site .page-hero-photo img{max-height:360px}
+  main#main.public-site .contact-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:36px}
+}
+@media(max-width:760px){
+  main#main.public-site .page-hero-inner{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+  main#main.public-site .page-hero-photo{width:100%}
+  main#main.public-site .page-hero-photo img{aspect-ratio:16/10;max-height:340px}
+  main#main.public-site .contact-layout{grid-template-columns:minmax(0,1fr);gap:32px}
+  main#main.public-site .form-grid{grid-template-columns:minmax(0,1fr)}
+  main#main.public-site .page-aside{position:static;display:flex;align-items:flex-start;flex-wrap:wrap;gap:8px 16px;overflow:visible;margin-bottom:32px}
+  main#main.public-site .page-aside>a{white-space:normal;max-width:100%;padding:8px 0;font-size:13px}
+  main#main.public-site .page-aside p{white-space:normal;overflow-wrap:anywhere;width:100%;margin-bottom:8px}
+  main#main.public-site .page-aside .eyebrow{display:none}
+}
+@media(max-width:640px){
+  main#main.public-site .programme-card{--card-inset:24px}
+  main#main.public-site .programme-card h3{font-size:27px}
+  main#main.public-site .approach-home .approach-image{min-height:360px}
+  main#main.public-site .approach-home .approach-image>span{left:22px;bottom:22px;font-size:10px}
+  main#main.public-site .document-card:has(.document-photo)>div{padding:23px}
+  main#main.public-site .document-card h3{font-size:25px}
+  main#main.public-site .document-card p{font-size:14px}
+  main#main.public-site .library-tools .filters{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  main#main.public-site .library-tools .filter-select{font-size:12px!important;min-height:46px}
+  main#main.public-site .library-search{padding:13px;gap:9px}
+  main#main.public-site .library-search input{font-size:14px}
+  main#main.public-site .education-source{gap:18px}
+  main#main.public-site .form-panel{padding:23px}
+  main#main.public-site .community-photo img{aspect-ratio:4/3}
+}
