@@ -5,8 +5,8 @@ import Link from 'next/link';
 import {ArrowUpRight, MapPin, Search} from 'lucide-react';
 import {regions, districtCount, geographySource} from '@/lib/sierra-leone';
 
-export default function SierraLeoneDirectory() {
-  const [selected, setSelected] = useState('all');
+export default function SierraLeoneDirectory({initialRegion = 'all'}: {initialRegion?: string}) {
+  const [selected, setSelected] = useState(regions.some(region => region.id === initialRegion) ? initialRegion : 'all');
   const [search, setSearch] = useState('');
   const matches = regions.filter(region => selected === 'all' || region.id === selected)
     .map(region => ({...region, districts: region.districts.filter(district => district.toLowerCase().includes(search.trim().toLowerCase()))}))

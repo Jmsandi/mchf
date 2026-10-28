@@ -2,12 +2,37 @@ import Link from 'next/link';
 import {ArrowRight, ArrowUpRight, MapPin} from 'lucide-react';
 import {regions, districtCount, programmeContext} from '@/lib/sierra-leone';
 import {stockImages} from '@/lib/stock-images';
+import styles from './national-focus.module.css';
 
 export function NationalFocus() {
-  return <section className='national-focus section'>
-    <div className='container national-focus-grid'>
-      <div><span className='eyebrow light'><MapPin size={16}/> ROOTED IN SIERRA LEONE</span><h2>One country.<br/>Every community.</h2><p>From Freetown’s neighbourhoods to rural towns, coastal communities and villages, better health begins with listening to the people who live there.</p><p>Our national focus welcomes knowledge and collaboration from all five regions.</p><Link href='/sierra-leone' className='button white'>Explore our Sierra Leone focus<ArrowRight size={17}/></Link></div>
-      <div className='national-regions'><div className='national-regions-heading'><span>{regions.length} regions</span><span>{districtCount} districts</span><span>One shared purpose</span></div>{regions.map(region => <Link key={region.id} href='/sierra-leone#district-heading'><span>{region.name}</span><small>{region.districts.join(' · ')}</small><ArrowUpRight size={18}/></Link>)}<p>District names describe our national outlook. Active project locations are confirmed separately.</p></div>
+  return <section className={'national-focus ' + styles.section} aria-labelledby='national-focus-heading'>
+    <div className={'container ' + styles.layout}>
+      <div className={styles.intro}>
+        <span className={styles.eyebrow}><MapPin size={16} aria-hidden='true'/> ROOTED IN SIERRA LEONE</span>
+        <h2 id='national-focus-heading' className={styles.title}>One country.<br/>Every community.</h2>
+        <p>From Freetown’s neighbourhoods to rural towns, coastal communities and villages, better health begins with listening to the people who live there.</p>
+        <p>Our national focus welcomes knowledge and collaboration from all five regions.</p>
+        <Link href='/sierra-leone' className={styles.explore}>Explore our Sierra Leone focus<ArrowRight size={18} aria-hidden='true'/></Link>
+      </div>
+      <div className={styles.panel}>
+        <div className={styles.panelHeading}>
+          <dl className={styles.stats}>
+            <div><dt>Regions</dt><dd>{regions.length}</dd></div>
+            <div><dt>Districts</dt><dd>{districtCount}</dd></div>
+          </dl>
+          <p className={styles.sharedPurpose}>One shared<br/>purpose.</p>
+        </div>
+        <nav aria-label='Explore Sierra Leone by region'>
+          <ul className={styles.regionList}>{regions.map(region => <li key={region.id}>
+            <Link className={styles.regionLink} href={'/sierra-leone?region=' + region.id + '#district-heading'} aria-label={'Explore ' + region.name + ' region and its districts'}>
+              <span className={styles.regionName}>{region.name}</span>
+              <span className={styles.districts}>{region.districts.map(district => <span key={district}>{district}</span>)}</span>
+              <ArrowUpRight className={styles.regionArrow} size={18} aria-hidden='true'/>
+            </Link>
+          </li>)}</ul>
+        </nav>
+        <p className={styles.note}>District names describe our national outlook. Active project locations are confirmed separately.</p>
+      </div>
     </div>
   </section>;
 }
