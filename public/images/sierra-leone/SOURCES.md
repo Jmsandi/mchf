@@ -2,6 +2,9 @@
 
 Photographs are resized for the website and cropped by the page layout. Source credits do not imply endorsement or identify pictured people as MCHF beneficiaries. Stock photographs illustrate programme themes and are not presented as Sierra Leone locations.
 
+## MCHF branding edits · 5 November 2026
+The rural-health-promotion, koidu-newborn-care, kenema-health-worker-transport, community-dialogue and community-theatre-mile-91 images have AI-assisted edits to remove identifying names and third-party branding and introduce MCHF / Sierra Leone text. They are adapted illustrations based on the original photographs credited below; the added branding does not document MCHF ownership, employment, sponsorship or activities. Original source and licence attribution is retained.
+
 ## mother-and-child.jpg
 Alicia Clark / USAID · Sierra Leone · 2016
 Source: https://commons.wikimedia.org/wiki/File:Sierra_Leone_Ebola_Recovery,_Community_Engagment_and_Health_Posts_(25166400034).jpg

@@ -1,0 +1,49 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-05",
+  "purpose": "Replace identifying in-image names and organization branding with MCHF / Sierra Leone while retaining the existing photo subjects and scenes.",
+  "edits": [
+    {
+      "key": "rural",
+      "file": "public/images/sierra-leone/rural-health-promotion.jpg",
+      "prompt": "Use case: text-localization. Asset type: existing MCHF website photograph. Input image 1 is the edit target. Edit ONLY printed text and logos. On the hanging white banner remove ALL existing text, dates and organizational emblems including USAID, SN... organization, ACD... and International Medical Corps and the crest. Replace with a simple clean two-line print reading exactly \"MCHF\" and \"SIERRA LEONE\", in dark green, naturally positioned in the open upper central banner area with realistic folds and partial occlusion where people stand in front. The rest of the banner should be plain white cloth with existing shading and folds. Remove bicycle brand lettering from frame and seat and small polo-shirt animal emblem, leaving plain original surfaces. Keep the existing mother-and-child line illustration on banner if it fits. Preserve EVERY person, face, hands, pose, clothes, bicycle geometry, trees, setting, lighting and full original landscape framing. No added elements, no crop, no invented people. Highest fidelity localized edit.",
+      "generatedSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1adf3-2ce6-7323-a948-462e41acb251\\exec-3af53500-1115-4c16-93d4-9cf3a10b6603.png"
+    },
+    {
+      "key": "newborn",
+      "file": "public/images/sierra-leone/koidu-newborn-care.jpg",
+      "prompt": "Use case: text-localization. Asset type: existing MCHF website photograph. Input image 1 is the edit target. Edit ONLY text/branding in the supplied photograph. Replace the visible light-blue UNICEF sticker on the lower-left edge of the metal medical trolley with a realistic sticker reading exactly \"MCHF\" with smaller \"SIERRA LEONE\" if space permits. Remove commercial brand names/logos from the tall white-and-blue packaging in the center and other supply packaging, retain generic colors and clinical labels without identifying names. Preserve all nurses' identities, faces, hair covers, masks, clothes, poses, the baby's face/body, medical equipment positions, interior, lighting, original 3:2 full framing and photographic detail. Do not add any large title or other new branding elsewhere.",
+      "generatedSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1adf3-2ce6-7323-a948-462e41acb251\\exec-78647520-4a65-42a6-9ea3-b1ed0463479b.png"
+    },
+    {
+      "key": "transport",
+      "file": "public/images/sierra-leone/kenema-health-worker-transport.jpg",
+      "prompt": "Use case: text-localization. Asset type: existing MCHF website photograph. Input image 1 is the edit target. Localized text/branding edit of this exact photograph. Remove ALL motorcycle manufacturer names and model lettering (including TVS, Star and model numbers) from every visible fuel tank, side cover and front cowl throughout the image. Replace prominent fuel-tank TVS lettering with small realistic white decals reading exactly \"MCHF\" with tiny \"SIERRA LEONE\" below; on smaller distant bikes just remove brand lettering to plain matching paint. Remove any organizational or personal-name print on background sign or clothing. Preserve gold swoosh graphics, all motorcycle geometry, mirrors, wheels, red springs, colors, people, ochre building and blue roof, positions, perspective, lighting, and full 3:2 landscape framing. No new objects, no crop, no people alterations.",
+      "generatedSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1adf3-2ce6-7323-a948-462e41acb251\\exec-05eb1a9d-a1f0-457b-ae37-5a1481a7a0c4.png"
+    },
+    {
+      "key": "nurse",
+      "file": "public/images/stock/frontline-nurse.jpg",
+      "prompt": "Use case: text-localization. Asset type: existing MCHF website photograph. Input image 1 is the edit target. Edit ONLY the nurse's clipped ID badge. Replace ALL existing badge words including Medical Center and Jennifer Martin and RN with two lines reading exactly \"MCHF\" and \"SIERRA LEONE\" in crisp dark-green print on a simple white card within the existing turquoise badge holder. No personal name, no other institution. Preserve size, perspective, clip, realistic shadows of badge. Keep everything else in original photograph unchanged: same woman, face, mask, braids, hands, gloves, scrubs, tablet, stethoscope, background, lighting and original portrait framing. No added title anywhere else.",
+      "generatedSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1adf3-2ce6-7323-a948-462e41acb251\\exec-4103590b-bf84-45e9-8fca-58e4d11368eb.png"
+    },
+    {
+      "key": "dialogue",
+      "file": "public/images/sierra-leone/community-dialogue.jpg",
+      "prompt": "Use case: text-localization. Asset type: existing MCHF website photograph. Input image 1 is the edit target. Replace only the small white organizational lettering on the red polo shirt near the left-center of the image with small white embroidered text exactly \"MCHF\". Remove any other identifying organization name or brand logo printed on clothes or bags, reconstructing the same original fabric, but keep decorative clothing patterns unchanged. Preserve all people and identities, faces, poses, body proportions, clothes colors, trees, benches, objects, sunlight, full original 3:2 framing. Do not put a title over the photo.",
+      "generatedSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1adf3-2ce6-7323-a948-462e41acb251\\exec-9c84fcec-d484-4630-bb9c-916af00f89f9.png"
+    },
+    {
+      "key": "theatre",
+      "file": "public/images/sierra-leone/community-theatre-mile-91.jpg",
+      "prompt": "Use case: text-localization. Asset type: existing MCHF website photograph. Input image 1 is the edit target. Remove identifying names/brands on building signs and clothing only. Replace the text block high on the pale-yellow building at the upper left with small realistic dark-green painted text \"MCHF\" on the first line and \"SIERRA LEONE\" on the second. Remove the thin storefront name under the blue-grey eaves. On the blue T-shirt of the seated person at lower right, remove the cartoon and all accompanying brand wording, leaving the same blue fabric with a small simple white \"MCHF\" print. Remove any other legible organizational or commercial names from clothes or storefronts to plain original surfaces. Preserve EVERY person's identity, face, pose, clothing color, crowd arrangement, chairs, buildings, roofs, trees, dirt ground, shadows and full 3:2 landscape composition. No added people or objects. Localized edit only.",
+      "generatedSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1adf3-2ce6-7323-a948-462e41acb251\\exec-d3280fc2-5af9-4c0c-a8dc-1eb378cf788f.png"
+    },
+    {
+      "key": "board",
+      "file": "public/images/board/haja-mariama-turay.jpg",
+      "prompt": "Use case: text-localization. Asset type: existing MCHF website photograph. Input image 1 is the edit target. Edit ONLY organizational lettering and branding in this exact portrait. Replace all printed words and logos on the woman's blue/white lanyard with a repeating clean \"MCHF\" wordmark and simple green-white-blue stripes, following the existing fabric perspective and folds. On the framed poster at the top left replace all existing text with \"MCHF\" and \"SIERRA LEONE\" in dark blue, retain the animal silhouettes. Keep the woman EXACTLY the same person, her face, glasses, expression, braids, clothes, hands, pose, proportions, desk, office, plants, laptop, lighting, full portrait framing. Do not regenerate her face, do not change anything except poster text and lanyard print.",
+      "generatedSource": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1adf3-2ce6-7323-a948-462e41acb251\\exec-dfe7ad02-64ab-411a-a481-427541cd36f4.png"
+    }
+  ]
+}

@@ -2,6 +2,9 @@
 
 Photographs are resized for the website and cropped by the page layout. Source credits do not imply endorsement or identify pictured people as MCHF beneficiaries. Stock photographs illustrate programme themes and are not presented as Sierra Leone locations.
 
+## MCHF branding edit · 5 November 2026
+The frontline-nurse image has an AI-assisted edit replacing identifying badge text with MCHF / Sierra Leone branding. This is an illustrative adaptation and does not identify the pictured person as MCHF staff or establish a Sierra Leone location. Original photographer and licence attribution is retained below.
+
 ## microscope-research.jpg
 Artem Podrez · Stock photography; location not specified · 2020
 Source: https://www.pexels.com/photo/a-man-looking-through-the-microscope-5726708/

@@ -15,7 +15,7 @@ export function LearningPanel({lesson}: {lesson: Lesson}) {
         </div>
         {lesson.image && <figure>
           <img src={lesson.image} alt={photo?.alt || lesson.title} loading='lazy'/>
-          {photo && <figcaption>Photo: <a href={photo.source} target='_blank' rel='noreferrer'>{photo.photographer}</a></figcaption>}
+          {photo && <figcaption>{photo.kind === 'documentary' ? 'MCHF · Sierra Leone' : 'MCHF · Programme imagery'} · <Link href='/image-credits'>Image credits</Link></figcaption>}
         </figure>}
       </div>
       <div className='education-cards'>
@@ -43,7 +43,7 @@ function StockPhotographyCredits() {
     <div className='container'>
       <span className='eyebrow'>PHOTOGRAPHY & ATTRIBUTION</span>
       <h2>People, care and collaboration.</h2>
-      <p className='learning-overview-intro'>Our image collection combines Sierra Leone documentary photographs with licensed stock photography. Stock images illustrate themes and are identified separately from photographs with a verified Sierra Leone location. Dates refer to the original photograph or source listing. They have been resized and cropped for display and do not document MCHF activities or imply endorsement by the people pictured.</p>
+      <p className='learning-overview-intro'>Our image collection combines Sierra Leone documentary photographs with licensed stock photography. Stock images illustrate themes and are identified separately from photographs with a verified Sierra Leone location. Dates refer to the original photograph or source listing. Selected banners, signs, clothing, badges and vehicles have AI-assisted edits replacing identifying names and third-party branding with MCHF / Sierra Leone text. These adaptations do not document MCHF activities, employment, ownership or sponsorship, or imply endorsement by the people pictured. Original photographers, sources and licences are credited below.</p>
       <div className='learning-overview-grid'>
         {Object.values(stockImages).map(photo => <figure className='photo-credit' key={photo.image}>
           <img src={photo.image} alt={photo.alt} loading='lazy'/>
