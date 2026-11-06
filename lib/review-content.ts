@@ -16,7 +16,7 @@ const imageUpdates = [
   ['guide-immunization', '/images/sierra-leone/rural-health-promotion.jpg', stockImages.preventionLearning],
   ['guide-community-health', '/images/sierra-leone/community-theatre-mile-91.jpg', stockImages.participation],
   ['guide-research-innovation', '/images/sierra-leone/koidu-health-workers.jpg', stockImages.researchLearning],
-  ['guide-health-systems', '/images/sierra-leone/koidu-newborn-care.jpg', stockImages.systemsLearning],
+  ['guide-health-systems', '/images/sierra-leone/koidu-newborn-care.jpg', stockImages.healthSystems],
   ['resource-community-ownership', '/images/sierra-leone/community-dialogue.jpg', stockImages.communityLearning],
   ['resource-evidence-to-action', '/images/sierra-leone/port-loko-laboratory.jpg', stockImages.evidenceStory],
   ['resource-sustainable-systems', '/images/hero.jpg', stockImages.partnerships],

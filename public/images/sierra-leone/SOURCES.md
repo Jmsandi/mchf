@@ -3,7 +3,7 @@
 Photographs are resized for the website and cropped by the page layout. Source credits do not imply endorsement or identify pictured people as MCHF beneficiaries. Stock photographs illustrate programme themes and are not presented as Sierra Leone locations.
 
 ## MCHF branding edits · 5 November 2026
-The rural-health-promotion, koidu-newborn-care, kenema-health-worker-transport, community-dialogue and community-theatre-mile-91 images have AI-assisted edits to remove identifying names and third-party branding and introduce MCHF / Sierra Leone text. They are adapted illustrations based on the original photographs credited below; the added branding does not document MCHF ownership, employment, sponsorship or activities. Original source and licence attribution is retained.
+The rural-health-promotion, koidu-newborn-care, community-dialogue and community-theatre-mile-91 images have AI-assisted edits to remove identifying names and third-party branding and introduce MCHF / Sierra Leone text. They are adapted illustrations based on the original photographs credited below; the added branding does not document MCHF ownership, employment, sponsorship or activities. Original source and licence attribution is retained.
 
 ## mother-and-child.jpg
 Alicia Clark / USAID · Sierra Leone · 2016
@@ -40,7 +40,8 @@ Robert Yates / DFID · Sierra Leone · 2010
 Source: https://commons.wikimedia.org/wiki/File:Maternal_health_(4798750001).jpg
 Licence: CC BY 2.0 — https://creativecommons.org/licenses/by/2.0/
 
-## kenema-health-worker-transport.jpg
+## Retired image: kenema-health-worker-transport.jpg
+Removed from the website on 6 November 2026 because MCHF does not offer motorbikes. The source credit is retained as an archive record.
 Paul Lamin Musa · Kenema District · 2026
 Source: https://commons.wikimedia.org/wiki/File:IMotor_Bikes_for_Health_Workers_01.jpg
 Licence: CC0 — http://creativecommons.org/publicdomain/zero/1.0/deed.en

@@ -221,19 +221,6 @@ export const stockImages = {
     "location": "Stock photography; location not specified",
     "year": "2023",
     "kind": "stock"
-  },
-  "systemsLearning": {
-    "image": "/images/sierra-leone/kenema-health-worker-transport.jpg",
-    "alt": "Motorcycles distributed for health workers by the district health team in Kenema, Sierra Leone",
-    "caption": "Supporting health-worker transport · Kenema",
-    "photographer": "Paul Lamin Musa",
-    "source": "https://commons.wikimedia.org/wiki/File:IMotor_Bikes_for_Health_Workers_01.jpg",
-    "download": "https://upload.wikimedia.org/wikipedia/commons/f/f7/IMotor_Bikes_for_Health_Workers_01.jpg",
-    "license": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "licenseLabel": "CC0",
-    "location": "Kenema District",
-    "year": "2026",
-    "kind": "documentary"
   }
 } satisfies Record<string, StockPhoto>;
 
@@ -242,6 +229,7 @@ export function stockImageFor(image?: string) {
 }
 
 export const retiredImageReplacements: Record<string, StockPhoto> = {
+  '/images/sierra-leone/kenema-health-worker-transport.jpg': stockImages.healthSystems,
   '/images/sierra-leone/port-loko-laboratory.jpg': stockImages.evidence,
   '/images/learning-rmnch.jpg': stockImages.maternal,
   '/images/learning-immunization.jpg': stockImages.vaccination,

@@ -43,7 +43,7 @@ function StockPhotographyCredits() {
     <div className='container'>
       <span className='eyebrow'>PHOTOGRAPHY & ATTRIBUTION</span>
       <h2>People, care and collaboration.</h2>
-      <p className='learning-overview-intro'>Our image collection combines Sierra Leone documentary photographs with licensed stock photography. Stock images illustrate themes and are identified separately from photographs with a verified Sierra Leone location. Dates refer to the original photograph or source listing. Selected banners, signs, clothing, badges and vehicles have AI-assisted edits replacing identifying names and third-party branding with MCHF / Sierra Leone text. These adaptations do not document MCHF activities, employment, ownership or sponsorship, or imply endorsement by the people pictured. Original photographers, sources and licences are credited below.</p>
+      <p className='learning-overview-intro'>Our image collection combines Sierra Leone documentary photographs with licensed stock photography. Stock images illustrate themes and are identified separately from photographs with a verified Sierra Leone location. Dates refer to the original photograph or source listing. Selected banners, signs, clothing, and badges have AI-assisted edits replacing identifying names and third-party branding with MCHF / Sierra Leone text. These adaptations do not document MCHF activities, employment, ownership or sponsorship, or imply endorsement by the people pictured. Original photographers, sources and licences are credited below.</p>
       <div className='learning-overview-grid'>
         {Object.values(stockImages).map(photo => <figure className='photo-credit' key={photo.image}>
           <img src={photo.image} alt={photo.alt} loading='lazy'/>
