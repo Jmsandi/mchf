@@ -3,7 +3,7 @@ import {stockImages} from '@/lib/stock-images';
 export type PageVisual = {tone:'blue'|'green'|'teal'|'gold'|'clay';image?:string;alt?:string;caption?:string};
 
 export function pageVisual(path:string):PageVisual {
- if(['privacy','accessibility','image-credits','search'].includes(path))return {tone:'blue'};
+ if(['privacy','accessibility','search'].includes(path))return {tone:'blue'};
  if(path.includes('immunization'))return {tone:'green',...stockImages.vaccination};
  if(path.includes('rmnch'))return {tone:'blue',...reviewImages.newborn};
  if(path.includes('community'))return {tone:'teal',...stockImages.community};

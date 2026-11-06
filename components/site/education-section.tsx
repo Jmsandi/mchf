@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import {ArrowUpRight, BookOpen} from 'lucide-react';
 import {lessonFor, Lesson, programmeLessons} from '@/lib/education';
-import {stockImages, stockImageFor} from '@/lib/stock-images';
+import {stockImageFor} from '@/lib/stock-images';
 
 export function LearningPanel({lesson}: {lesson: Lesson}) {
   const photo = stockImageFor(lesson.image);
@@ -15,7 +15,6 @@ export function LearningPanel({lesson}: {lesson: Lesson}) {
         </div>
         {lesson.image && <figure>
           <img src={lesson.image} alt={photo?.alt || lesson.title} loading='lazy'/>
-          {photo && <figcaption>{photo.kind === 'documentary' ? 'MCHF · Sierra Leone' : 'MCHF · Programme imagery'} · <Link href='/image-credits'>Image credits</Link></figcaption>}
         </figure>}
       </div>
       <div className='education-cards'>
@@ -38,36 +37,12 @@ export function LearningPanel({lesson}: {lesson: Lesson}) {
   </section>;
 }
 
-function StockPhotographyCredits() {
-  return <section className='section'>
-    <div className='container'>
-      <span className='eyebrow'>PHOTOGRAPHY & ATTRIBUTION</span>
-      <h2>People, care and collaboration.</h2>
-      <p className='learning-overview-intro'>Our image collection combines Sierra Leone documentary photographs with licensed stock photography. Stock images illustrate themes and are identified separately from photographs with a verified Sierra Leone location. Dates refer to the original photograph or source listing. Selected banners, signs, clothing, and badges have AI-assisted edits replacing identifying names and third-party branding with MCHF / Sierra Leone text. These adaptations do not document MCHF activities, employment, ownership or sponsorship, or imply endorsement by the people pictured. Original photographers, sources and licences are credited below.</p>
-      <div className='learning-overview-grid'>
-        {Object.values(stockImages).map(photo => <figure className='photo-credit' key={photo.image}>
-          <img src={photo.image} alt={photo.alt} loading='lazy'/>
-          <figcaption>
-            <strong>{photo.caption}</strong>
-            <span>Photo: {photo.photographer}</span><span>{photo.location} · {photo.year}</span>
-            <div className='photo-credit-links'>
-              <a href={photo.source} target='_blank' rel='noreferrer'>Original source<ArrowUpRight size={14}/></a>
-              <a href={photo.license} target='_blank' rel='noreferrer'>{photo.licenseLabel}<ArrowUpRight size={14}/></a>
-            </div>
-          </figcaption>
-        </figure>)}
-      </div>
-    </div>
-  </section>;
-}
-
 export default function EducationSection({path}: {path: string}) {
   if (path.startsWith('resources/understanding-')) return null;
   const lesson = lessonFor(path);
   const guideImageAlreadyShown = path.startsWith('programmes/') || ['knowledge', 'publications'].includes(path);
   return lesson ? <>
     <LearningPanel lesson={guideImageAlreadyShown ? {...lesson, image: undefined} : lesson}/>
-    {path === 'image-credits' && <StockPhotographyCredits/>}
   </> : null;
 }
 
@@ -87,7 +62,6 @@ export function EducationOverview() {
           </div>
         </Link>)}
       </div>
-      <p className='source-note'>Documentary and stock photographs provide context for the learning topics. <Link href='/image-credits'>View photography credits</Link>.</p>
     </div>
   </section>;
 }
