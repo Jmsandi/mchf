@@ -85,3 +85,74 @@ footer .footer-bottom>div{flex-wrap:wrap;gap:14px 24px}
   main#main.public-site .form-panel{padding:23px}
   main#main.public-site .community-photo img{aspect-ratio:4/3}
 }
+
+/* Motion is progressive enhancement: unsupported browsers keep every section visible. */
+@keyframes mchf-logo-welcome{
+  from{opacity:0;transform:scale(.9) rotate(-6deg)}
+  to{opacity:1;transform:scale(1) rotate(0)}
+}
+@keyframes mchf-logo-glow{
+  0%,100%{filter:drop-shadow(0 0 0 transparent)}
+  50%{filter:drop-shadow(0 0 9px #27814b40)}
+}
+@keyframes mchf-enter{
+  from{opacity:0;translate:0 20px}
+  to{opacity:1;translate:0 0}
+}
+@keyframes mchf-hero-settle{
+  from{transform:scale(1.035)}
+  to{transform:scale(1)}
+}
+@keyframes mchf-scroll-reveal{
+  from{opacity:.15;translate:0 24px}
+  to{opacity:1;translate:0 0}
+}
+
+@media(prefers-reduced-motion:no-preference){
+  .header .brand img{
+    animation:mchf-logo-welcome .8s cubic-bezier(.2,.7,.2,1),mchf-logo-glow 3s ease-in-out .8s 3;
+    transition:transform .35s ease;
+  }
+  :is(.header,footer) .brand:focus-visible img{transform:scale(1.06) rotate(-4deg)}
+  footer .brand img{transition:transform .35s ease}
+  main#main.public-site .hero-photo{animation:mchf-hero-settle 1.6s ease-out}
+  main#main.public-site .hero-content>:is(.eyebrow,h1,p,.hero-actions,.hero-foot){
+    animation:mchf-enter .8s cubic-bezier(.2,.7,.2,1) both;
+  }
+  main#main.public-site .hero-content>h1{animation-delay:.1s}
+  main#main.public-site .hero-content>p{animation-delay:.2s}
+  main#main.public-site .hero-content>.hero-actions{animation-delay:.3s}
+  main#main.public-site .hero-content>.hero-foot{animation-delay:.4s}
+  main#main.public-site .page-hero-inner>div{animation:mchf-enter .7s ease-out both}
+  main#main.public-site .page-hero-photo{animation:mchf-enter .8s ease-out .15s both}
+  main#main.public-site :is(.audience-card,.programme-card,.insight-card,.learning-overview-card,.document-card,.board-card){
+    transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+  }
+  :is(.header,.public-site,.partner-banner) .button{
+    transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease,color .25s ease;
+  }
+  :is(.header,.public-site,.partner-banner) :is(.button,.text-link) svg{transition:transform .25s ease}
+  :is(.header,.public-site,.partner-banner) :is(.button,.text-link):focus-visible svg{transform:translateX(3px)}
+
+  /* Each card enters independently, including when grids stack on a phone. */
+  @supports (animation-timeline:view()) and (animation-range:entry 0% entry 80%){
+    main#main.public-site :is(.section-head,.audience-card,.programme-card,.programme-callout,.mission-feature-grid>div,.approach-image,.approach-copy,.community-photo,.community-copy,.values-feature-grid>article,.insight-card,.learning-overview-card,.document-card,.work-state>div,.strategy-home-inner>div,.metric){
+      animation:mchf-scroll-reveal linear both;
+      animation-timeline:view();
+      animation-range:entry 0% entry 80%;
+    }
+  }
+
+  @media(hover:hover) and (pointer:fine){
+    :is(.header,footer) .brand:hover img{transform:scale(1.06) rotate(-4deg)}
+    main#main.public-site :is(.audience-card,.programme-card,.insight-card,.learning-overview-card,.document-card,.board-card):hover{
+      transform:translateY(-5px);
+      box-shadow:0 14px 30px #143b5614;
+    }
+    :is(.header,.public-site,.partner-banner) .button:hover{transform:translateY(-2px);box-shadow:0 7px 18px #143b5620}
+    :is(.header,.public-site,.partner-banner) :is(.button,.text-link):hover svg{transform:translateX(3px)}
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
